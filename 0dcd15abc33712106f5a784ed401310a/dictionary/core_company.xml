@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="all_tables.text_index_translations=true,global_search_config_handler=CompanySearchConfig,kagami_csindex_enabled=true,slushbucket_omit_embedded=true" create_roles="user_admin" db_object_id="1c43b910190312104f3423cebaaa85d5" label="Company" max_length="40" name="core_company" text_index="true" type="collection">
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Client" max_length="40" name="x_1593770_mock_ski_client" type="boolean"/>
+    </element>
+</database>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Tamo cursando tamo cursando</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2025-02-25 11:00:28</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[(function executeScheduleJob() {
+    var request = new sn_ws.RESTMessageV2();
+    request.setEndpoint('https://dev224983.service-now.com/api/now/table/x_1632557_skillup_courses?sysparm_fields=template%2Ctreinamento%2Cduracao%2Cordem');
+    request.setHttpMethod('GET');
+    request.setBasicAuth('admin', 'Edxshare#2025');
+
+    var response = request.execute();
+    var body = response.getBody();
+    var parsedResponse = JSON.parse(body);
+    var results = parsedResponse.result;
+
+    if (results && results.length > 0) {
+        for (var i = 0; i < results.length; i++) {
+            var template = results[i].template;
+            var treinamento = results[i].treinamento;
+            var duracao = results[i].duracao;
+            var ordem = results[i].ordem;
+
+            // Validação: Só continua se TODOS os campos estiverem preenchidos
+            if (!template || !treinamento || !duracao || !ordem) {
+                continue;
+            }
+
+            var record = new GlideRecord('x_1593770_mock_ski_cursos');
+            record.addQuery('template', template);
+            record.addQuery('treinamento', treinamento);
+            record.addQuery('duracao', duracao);
+            record.addQuery('order', ordem);
+            record.query();
+
+            if (!record.next()) {
+                var newRecord = new GlideRecord('x_1593770_mock_ski_cursos');
+                newRecord.initialize();
+
+                newRecord.template = template;
+                newRecord.order = ordem;
+                newRecord.duracao = duracao;
+                newRecord.treinamento = treinamento;
+
+                newRecord.insert();
+            }
+        }
+    }
+})();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 11:06:22</sys_created_on>
+        <sys_id>e81975f7c37b52106f5a784ed4013188</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Tamo cursando tamo cursando</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sysauto_script_e81975f7c37b52106f5a784ed4013188</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 23:34:38</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>e81975f7c37b52106f5a784ed4013188</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-25 11:06:22</sys_created_on>
+        <sys_id>726a793bc37b52106f5a784ed40131a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-25 11:06:22</sys_updated_on>
+        <table>sysauto_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

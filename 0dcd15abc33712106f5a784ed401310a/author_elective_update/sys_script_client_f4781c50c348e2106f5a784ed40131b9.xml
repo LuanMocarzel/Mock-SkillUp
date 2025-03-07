@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>cargo</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Cada um vai pro seu canto(grupo)</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    var userId = gForm.getValue('sys_id');
+    var cargoAtual = newValue;
+    var cargoAnterior = oldValue; 
+
+    var grupos = {
+        'estagiario': 'b4377b48c384e2106f5a784ed4013160',
+        'gestores': 'b028b308c384e2106f5a784ed401316f',
+        'monitores': 'c538bb48c384e2106f5a784ed40131b1'
+    };
+
+    var ga = new GlideAjax('AtualizaGrupoUsuario'); 
+    ga.addParam('sysparm_name', 'atualizarGrupo');
+    ga.addParam('sysparm_user_id', userId);
+    ga.addParam('sysparm_cargo_atual', cargoAtual);
+    ga.addParam('sysparm_cargo_anterior', cargoAnterior);
+    
+
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 17:18:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f4781c50c348e2106f5a784ed40131b9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Cada um vai pro seu canto(grupo)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sys_script_client_f4781c50c348e2106f5a784ed40131b9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 17:22:13</sys_updated_on>
+        <table>x_1593770_mock_ski_equipe</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sys_script_client_f4781c50c348e2106f5a784ed40131b9</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;cargo&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Cada um vai pro seu canto(grupo)&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    var userId = gForm.getValue('sys_id');
+    var cargoAtual = newValue;
+    var cargoAnterior = oldValue; 
+
+    var grupos = {
+        'estagiario': 'b4377b48c384e2106f5a784ed4013160',
+        'gestores': 'b028b308c384e2106f5a784ed401316f',
+        'monitores': 'c538bb48c384e2106f5a784ed40131b1'
+    };
+
+    var ga = new GlideAjax('AtualizaGrupoUsuario'); 
+    ga.addParam('sysparm_name', 'atualizarGrupo');
+    ga.addParam('sysparm_user_id', userId);
+    ga.addParam('sysparm_cargo_atual', cargoAtual);
+    ga.addParam('sysparm_cargo_anterior', cargoAnterior);
+    
+
+}
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-26 17:18:54&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;f4781c50c348e2106f5a784ed40131b9&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Cada um vai pro seu canto(grupo)&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Mock Skillup" source="x_1593770_mock_ski"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock Skillup"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_f4781c50c348e2106f5a784ed40131b9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-26 17:22:13&lt;/sys_updated_on&gt;&lt;table&gt;x_1593770_mock_ski_equipe&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1970447507</payload_hash>
+        <record_name>Cada um vai pro seu canto(grupo)</record_name>
+        <reverted_from/>
+        <source>95cd95abc33712106f5a784ed40131bf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 17:22:13</sys_created_on>
+        <sys_id>160a9c10c348e2106f5a784ed40131c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1954347caa00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 17:22:13</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>da0a9c10d848e210095765fcfb1c15c2</update_guid>
+        <update_guid_history>da0a9c10d848e210095765fcfb1c15c2:1970447507,33595c90d748e21018acf81216dfc71c:903266747,b5491c903f48e21033cedd5efc8d516a:103097385</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 17:25:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>0d28b08adccd437080db24ef22b6c110</sys_id>
+        <sys_metadata>f4781c50c348e2106f5a784ed40131b9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cada um vai pro seu canto(grupo)</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent display_value="Equipe">2d2fd92fc33712106f5a784ed401314f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sys_script_client_f4781c50c348e2106f5a784ed40131b9</sys_update_name>
+        <sys_update_version display_value="sys_script_client_f4781c50c348e2106f5a784ed40131b9">160a9c10c348e2106f5a784ed40131c3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 17:25:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

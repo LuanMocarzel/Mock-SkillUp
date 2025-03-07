@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="822625a7c37712106f5a784ed40131a3" label="Skill" max_length="40" name="x_1593770_mock_ski_skill" type="collection">
+        <element display="true" label="Skill" mandatory="true" max_length="40" name="skill" type="string"/>
+        <element choice="1" label="Nivel" max_length="40" name="nivel" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Basic" value="basic"/>
+                <element inactive_on_update="false" label="Advanced" value="advanced"/>
+                <element inactive_on_update="false" label="Intermediate" value="intermediate"/>
+            </choice>
+        </element>
+        <element choice="1" label="Technical" max_length="40" name="technical" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Language" value="language"/>
+                <element inactive_on_update="false" label="general" value="general"/>
+                <element inactive_on_update="false" label="Technical" value="technical"/>
+                <element inactive_on_update="false" label="Experience" sequence="0" value="Experience"/>
+            </choice>
+        </element>
+    </element>
+</database>

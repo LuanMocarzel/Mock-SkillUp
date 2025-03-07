@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6990e5afc33712106f5a784ed4013194" label="Progresso" max_length="40" name="x_1593770_mock_ski_m2m_cursos_equipes" type="collection">
+        <element choice="1" label="status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Aberto" value="aberto"/>
+                <element inactive_on_update="false" label="Em andamento" value="em andamento"/>
+                <element inactive_on_update="false" label="Concluído" value="concluido"/>
+            </choice>
+        </element>
+        <element label="Estagiario" max_length="32" name="estagiario" reference="x_1593770_mock_ski_equipe" reference_qual="cargo=estagiario^EQ" reference_qual_condition="cargo=estagiario^EQ" type="reference"/>
+        <element label="Curso" max_length="32" name="curso" reference="x_1593770_mock_ski_cursos" type="reference"/>
+        <index name="index">
+            <element name="curso"/>
+        </index>
+        <index name="index2">
+            <element name="estagiario"/>
+        </index>
+    </element>
+</database>

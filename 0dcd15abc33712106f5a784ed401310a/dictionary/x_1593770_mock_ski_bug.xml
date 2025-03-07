@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="8558712fc3b712106f5a784ed401319d" label="Bug" max_length="40" name="x_1593770_mock_ski_bug" type="collection">
+        <element label="Breve descricao" mandatory="true" max_length="40" name="breve_descricao" type="string"/>
+        <element label="Anexo" max_length="40" name="anexo" type="file_attachment"/>
+        <element label="Projeto" mandatory="true" max_length="32" name="projeto" reference="x_1593770_mock_ski_projetos" type="reference"/>
+        <element choice="1" label="Gravidade" max_length="40" name="gravidade" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Médio" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Baixa" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Alta" sequence="2" value="3"/>
+            </choice>
+        </element>
+        <element label="Descricao" max_length="8000" name="descricao" type="html"/>
+        <element label="Tarefa" mandatory="true" max_length="32" name="tarefa" reference="task" type="reference"/>
+        <element label="Passos para reproduzir" max_length="8000" name="passos_para_reproduzir" type="html"/>
+        <element label="Assigned" max_length="32" name="assigned" reference="sys_user" type="reference"/>
+        <element label="Solicitante" max_length="32" name="solicitante" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="assigned"/>
+        </index>
+        <index name="index2">
+            <element name="projeto"/>
+        </index>
+        <index name="index3">
+            <element name="solicitante"/>
+        </index>
+        <index name="index4">
+            <element name="tarefa"/>
+        </index>
+    </element>
+</database>
