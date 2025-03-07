@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="1f93e5a3c37712106f5a784ed4013136" extends="task" label="Tarefa" max_length="40" name="x_1593770_mock_ski_tarefa" type="collection">
+        <element label="Hora estimada" mandatory="true" max_length="40" name="hora_estimada" type="glide_duration"/>
+        <element label="Nome da Tarefa" mandatory="true" max_length="40" name="nome_da_tarefa" type="string"/>
+        <element label="Dependencias" mandatory="true" max_length="40" name="dependencias" type="string"/>
+        <element label="Hora Trabalhada" max_length="40" name="hora_trabalhada" type="glide_duration"/>
+        <element label="Projeto" mandatory="true" max_length="32" name="projeto" reference="x_1593770_mock_ski_projetos" type="reference"/>
+    </element>
+</database>

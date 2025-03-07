@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="cf3539abc37712106f5a784ed4013109" label="Possui Skill" max_length="40" name="x_1593770_mock_ski_m2m_skill_equipes" type="collection">
+        <element attributes="encode_utf8=false" label="Skills" max_length="32" name="x_1593770_mock_ski_skill" reference="x_1593770_mock_ski_skill" type="reference"/>
+        <element choice="3" choice_field="nivel" choice_table="x_1593770_mock_ski_skill" label="Nivel" max_length="40" name="nivel" type="choice">
+            <choice/>
+        </element>
+        <element attributes="encode_utf8=false" default="javascript: gs.getUserID();" label="Equipes" max_length="32" name="x_1593770_mock_ski_equipe" reference="x_1593770_mock_ski_equipe" type="reference"/>
+        <index name="index">
+            <element name="x_1593770_mock_ski_equipe"/>
+        </index>
+        <index name="index2">
+            <element name="x_1593770_mock_ski_skill"/>
+        </index>
+    </element>
+</database>

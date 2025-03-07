@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Skill</name>
+        <order>100</order>
+        <roles>x_1593770_mock_ski.user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-24 15:00:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b25629a7c37712106f5a784ed40131b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Skill</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sys_app_application_b25629a7c37712106f5a784ed40131b8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-24 15:00:13</sys_updated_on>
+        <title>Skill</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sys_app_application_b25629a7c37712106f5a784ed40131b8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name>Skill</name><order>100</order><roles>x_1593770_mock_ski.user</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-24 15:00:13</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>b25629a7c37712106f5a784ed40131b8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Skill</sys_name><sys_overrides/><sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package><sys_policy/><sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope><sys_update_name>sys_app_application_b25629a7c37712106f5a784ed40131b8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-24 15:00:13</sys_updated_on><title>Skill</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>-1517218263</payload_hash>
+        <record_name>Skill</record_name>
+        <reverted_from/>
+        <source>95cd95abc33712106f5a784ed40131bf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-24 15:00:13</sys_created_on>
+        <sys_id>fe5629a7c37712106f5a784ed40131ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195387912280000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-24 15:00:13</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>f25629a74677121093f80b88e859b3ba</update_guid>
+        <update_guid_history>f25629a74677121093f80b88e859b3ba:-1517218263</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Skill">fb830a6fc3f712106f5a784ed401314b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-24 17:07:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>00f6b1ba1de04edc8a4b7b2c116c3990</sys_id>
+        <sys_metadata>b25629a7c37712106f5a784ed40131b8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Skill</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sys_app_application_b25629a7c37712106f5a784ed40131b8</sys_update_name>
+        <sys_update_version display_value="sys_app_application_b25629a7c37712106f5a784ed40131b8">fe5629a7c37712106f5a784ed40131ba</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-24 17:07:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

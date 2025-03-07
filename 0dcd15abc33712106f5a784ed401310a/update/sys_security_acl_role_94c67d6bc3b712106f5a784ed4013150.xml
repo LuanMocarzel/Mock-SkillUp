@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-24 16:11:52</sys_created_on>
+        <sys_id>94c67d6bc3b712106f5a784ed4013150</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_1593770_mock_ski_aviso.x_1593770_mock_ski.gestor</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_security_acl display_value="x_1593770_mock_ski_aviso">10c67d6bc3b712106f5a784ed401314d</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_94c67d6bc3b712106f5a784ed4013150</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-27 11:50:47</sys_updated_on>
+        <sys_user_role display_value="x_1593770_mock_ski.gestor" name="x_1593770_mock_ski.gestor">5790af88c304e2106f5a784ed401314f</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

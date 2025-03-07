@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="fbc12923c37712106f5a784ed40131d8" label="Cetificados" max_length="40" name="x_1593770_mock_ski_cetificados" type="collection">
+        <element label="Quantidade de horas" max_length="40" name="quantidade_de_horaas" type="glide_duration"/>
+        <element label="Anexo" mandatory="true" max_length="40" name="anexo" type="file_attachment"/>
+        <element label="Curso" mandatory="true" max_length="32" name="curso" reference="x_1593770_mock_ski_cursos" type="reference"/>
+        <element label="Estagiario" mandatory="true" max_length="32" name="estagiario" reference="x_1593770_mock_ski_equipe" reference_qual="cargo=estagiario^EQ" reference_qual_condition="cargo=estagiario^EQ" type="reference"/>
+        <element label="Data de emissão" max_length="40" name="data_de_emissao" type="glide_date"/>
+        <index name="index">
+            <element name="curso"/>
+        </index>
+        <index name="index2">
+            <element name="estagiario"/>
+        </index>
+    </element>
+</database>

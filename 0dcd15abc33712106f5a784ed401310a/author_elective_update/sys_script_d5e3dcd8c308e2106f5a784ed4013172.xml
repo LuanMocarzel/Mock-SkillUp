@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1593770_mock_ski_equipe</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_1593770_mock_ski_equipe">cargoANYTHING^EQ<item display_value="-- None --" endquery="false" field="cargo" goto="false" newquery="false" operator="ANYTHING" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Cada um vai pro seu canto(grupo)</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null quando assíncrono*/) {
+    var gr = new GlideRecord('sys_user_grmember');
+
+    if (current.cargo == 'estagiario') {
+        gr.initialize();
+        gr.setValue('group', 'b4377b48c384e2106f5a784ed4013160');
+        gr.setValue('user', current.getValue('sys_id'));
+        gr.insert();
+    } else if (current.cargo == 'gestores') {
+        gr.initialize();
+        gr.setValue('group', 'b028b308c384e2106f5a784ed401316f');
+        gr.setValue('user', current.getValue('sys_id'));
+        gr.insert();
+    } else if (current.cargo == 'monitores') {
+        gr.initialize();
+        gr.setValue('group', 'c538bb48c384e2106f5a784ed40131b1');
+        gr.setValue('user', current.getValue('sys_id'));
+        gr.insert();
+    }
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 17:01:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d5e3dcd8c308e2106f5a784ed4013172</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Cada um vai pro seu canto(grupo)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sys_script_d5e3dcd8c308e2106f5a784ed4013172</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 17:10:57</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=d5e3dcd8c308e2106f5a784ed4013172"/>
+    <sys_es_latest_script action="DELETE">
+        <id>d5e3dcd8c308e2106f5a784ed4013172</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 17:01:26</sys_created_on>
+        <sys_id>b5451c98c308e2106f5a784ed401312f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 17:01:26</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sys_script_d5e3dcd8c308e2106f5a784ed4013172</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_1593770_mock_ski_equipe&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition table="x_1593770_mock_ski_equipe"&gt;cargoANYTHING^EQ&lt;item display_value="-- None --" endquery="false" field="cargo" goto="false" newquery="false" operator="ANYTHING" or="false" value=""/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/filter_condition&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Cada um vai pro seu canto(grupo)&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null quando assíncrono*/) {
+    var gr = new GlideRecord('sys_user_grmember');
+
+    if (current.cargo == 'estagiario') {
+        gr.initialize();
+        gr.setValue('group', 'b4377b48c384e2106f5a784ed4013160');
+        gr.setValue('user', current.getValue('sys_id'));
+        gr.insert();
+    } else if (current.cargo == 'gestores') {
+        gr.initialize();
+        gr.setValue('group', 'b028b308c384e2106f5a784ed401316f');
+        gr.setValue('user', current.getValue('sys_id'));
+        gr.insert();
+    } else if (current.cargo == 'monitores') {
+        gr.initialize();
+        gr.setValue('group', 'c538bb48c384e2106f5a784ed40131b1');
+        gr.setValue('user', current.getValue('sys_id'));
+        gr.insert();
+    }
+})(current, previous);
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-26 17:01:26&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;d5e3dcd8c308e2106f5a784ed4013172&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;Cada um vai pro seu canto(grupo)&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Mock Skillup" source="x_1593770_mock_ski"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock Skillup"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_d5e3dcd8c308e2106f5a784ed4013172&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-26 17:10:57&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;before&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=d5e3dcd8c308e2106f5a784ed4013172"/&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;d5e3dcd8c308e2106f5a784ed4013172&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-26 17:01:26&lt;/sys_created_on&gt;&lt;sys_id&gt;b5451c98c308e2106f5a784ed401312f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-26 17:01:26&lt;/sys_updated_on&gt;&lt;table&gt;sys_script&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1701339360</payload_hash>
+        <record_name>Cada um vai pro seu canto(grupo)</record_name>
+        <reverted_from/>
+        <source>95cd95abc33712106f5a784ed40131bf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 17:10:57</sys_created_on>
+        <sys_id>5177109cc308e2106f5a784ed4013121</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195433d7b740000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 17:10:57</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>5577109cbd08e210cc637614a1e80620</update_guid>
+        <update_guid_history>5577109cbd08e210cc637614a1e80620:-1701339360,0f36509c3608e210ba033c418c2b5793:1520659332,a185dc5c2408e21021e11d5e430edca6:978353272,ec55105c5e08e210e5cdeb70c616794f:-1942572184,4e45985c0508e2105f0e484a38b3d1e5:-401314425</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 17:15:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>036d5d308dcf42a485b3e0f7b4bbf5e4</sys_id>
+        <sys_metadata>d5e3dcd8c308e2106f5a784ed4013172</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cada um vai pro seu canto(grupo)</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent display_value="Equipe">2d2fd92fc33712106f5a784ed401314f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sys_script_d5e3dcd8c308e2106f5a784ed4013172</sys_update_name>
+        <sys_update_version display_value="sys_script_d5e3dcd8c308e2106f5a784ed4013172">5177109cc308e2106f5a784ed4013121</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 17:15:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

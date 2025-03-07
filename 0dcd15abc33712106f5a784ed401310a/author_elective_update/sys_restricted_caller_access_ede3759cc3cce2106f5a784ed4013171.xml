@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
+    <sys_restricted_caller_access action="DELETE">
+        <description/>
+        <operation>delete</operation>
+        <rca_type>real_rca</rca_type>
+        <source>17bad814c348e2106f5a784ed4013130</source>
+        <source_scope display_value="Global">global</source_scope>
+        <source_table>sys_script</source_table>
+        <source_type>0</source_type>
+        <status>2</status>
+        <sys_class_name>sys_restricted_caller_access</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 23:57:54</sys_created_on>
+        <sys_id>ede3759cc3cce2106f5a784ed4013171</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>global</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sys_restricted_caller_access_ede3759cc3cce2106f5a784ed4013171</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 23:57:54</sys_updated_on>
+        <target name="sys_user_grmember" target_table="sys_db_object">81433d10190312104f3423cebaaa8519</target>
+        <target_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</target_scope>
+        <target_table>sys_db_object</target_table>
+        <target_type>1</target_type>
+    </sys_restricted_caller_access>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sys_restricted_caller_access_ede3759cc3cce2106f5a784ed4013171</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access"><sys_restricted_caller_access action="INSERT_OR_UPDATE"><description/><operation>delete</operation><rca_type>real_rca</rca_type><source>17bad814c348e2106f5a784ed4013130</source><source_scope display_value="Global">global</source_scope><source_table>sys_script</source_table><source_type>0</source_type><status>2</status><sys_class_name>sys_restricted_caller_access</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-26 23:57:54</sys_created_on><sys_id>ede3759cc3cce2106f5a784ed4013171</sys_id><sys_mod_count>0</sys_mod_count><sys_name>global</sys_name><sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package><sys_policy/><sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope><sys_update_name>sys_restricted_caller_access_ede3759cc3cce2106f5a784ed4013171</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-26 23:57:54</sys_updated_on><target name="sys_user_grmember" target_table="sys_db_object">81433d10190312104f3423cebaaa8519</target><target_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</target_scope><target_table>sys_db_object</target_table><target_type>1</target_type></sys_restricted_caller_access></record_update>]]></payload>
+        <payload_hash>-272580181</payload_hash>
+        <record_name>global</record_name>
+        <reverted_from/>
+        <source>95cd95abc33712106f5a784ed40131bf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 23:57:54</sys_created_on>
+        <sys_id>229475dcc3cce2106f5a784ed4013199</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19544b20da40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 23:57:54</sys_updated_on>
+        <type>Restricted Caller Access Privilege</type>
+        <update_guid>269475dc9ccce210daa26408039d1c98</update_guid>
+        <update_guid_history>269475dc9ccce210daa26408039d1c98:-272580181</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-27 00:02:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_restricted_caller_access">sys_restricted_caller_access</sys_db_object>
+        <sys_id>120685b078934664afd5a78c6e3626a4</sys_id>
+        <sys_metadata>ede3759cc3cce2106f5a784ed4013171</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>global</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sys_restricted_caller_access_ede3759cc3cce2106f5a784ed4013171</sys_update_name>
+        <sys_update_version display_value="sys_restricted_caller_access_ede3759cc3cce2106f5a784ed4013171">229475dcc3cce2106f5a784ed4013199</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-27 00:02:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

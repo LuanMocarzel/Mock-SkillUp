@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="hora_estimada" label="Hora estimada" language="en" table="x_1593770_mock_ski_tarefa">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>hora_estimada</element>
+            <help/>
+            <hint/>
+            <label>Hora estimada</label>
+            <language>en</language>
+            <name>x_1593770_mock_ski_tarefa</name>
+            <plural>Hora estimadas</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-24 14:51:44</sys_created_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Hora estimada</sys_name>
+            <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+            <sys_update_name>sys_documentation_x_1593770_mock_ski_tarefa_hora_estimada_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-26 16:55:01</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

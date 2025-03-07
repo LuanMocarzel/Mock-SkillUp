@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1593770_mock_ski.AtualizaGrupoUsuario</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AtualizaGrupoUsuario</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AtualizaGrupoUsuario = Class.create();
+AtualizaGrupoUsuario.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    
+    atualizarGrupo: function() {
+        var userId = this.getParameter('sysparm_user_id');
+        var cargoAtual = this.getParameter('sysparm_cargo_atual');
+        var cargoAnterior = this.getParameter('sysparm_cargo_anterior');
+
+        var grupos = {
+            'estagiario': 'b4377b48c384e2106f5a784ed4013160',
+            'gestores': 'b028b308c384e2106f5a784ed401316f',
+            'monitores': 'c538bb48c384e2106f5a784ed40131b1'
+        };
+
+        var grupoAnteriorExiste = false;
+
+        if (cargoAnterior && grupos[cargoAnterior]) {
+            var grCheck = new GlideRecord('sys_user_grmember');
+            grCheck.addQuery('user', userId);
+            grCheck.addQuery('group', grupos[cargoAnterior]);
+            grCheck.query();
+
+            if (grCheck.next()) {
+                grupoAnteriorExiste = true;
+            }
+
+            // Se o usuário estava no grupo anterior, remover ele
+            if (grupoAnteriorExiste) {
+                var grDelete = new GlideRecord('sys_user_grmember');
+                grDelete.addQuery('user', userId);
+                grDelete.addQuery('group', grupos[cargoAnterior]);
+                grDelete.query();
+                while (grDelete.next()) {
+                    grDelete.deleteRecord();
+                }
+            }
+        }
+
+        // Se o usuário já estava em um grupo e foi removido ou não tinha grupo antes, adiciona ao novo grupo
+        if (cargoAtual && grupos[cargoAtual]) {
+            var grInsert = new GlideRecord('sys_user_grmember');
+            grInsert.initialize();
+            grInsert.setValue('group', grupos[cargoAtual]);
+            grInsert.setValue('user', userId);
+            grInsert.insert();
+        }
+
+        return 'Usuário atualizado com sucesso';
+    }
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 17:24:00</sys_created_on>
+        <sys_id>aa1a5cd0c348e2106f5a784ed4013178</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AtualizaGrupoUsuario</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sys_script_include_aa1a5cd0c348e2106f5a784ed4013178</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 17:24:00</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="DELETE">
+        <id>aa1a5cd0c348e2106f5a784ed4013178</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 17:24:00</sys_created_on>
+        <sys_id>2c7a50d0c348e2106f5a784ed40131e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 17:24:00</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sys_script_include_aa1a5cd0c348e2106f5a784ed4013178</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1593770_mock_ski.AtualizaGrupoUsuario&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;AtualizaGrupoUsuario&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var AtualizaGrupoUsuario = Class.create();
+AtualizaGrupoUsuario.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    
+    atualizarGrupo: function() {
+        var userId = this.getParameter('sysparm_user_id');
+        var cargoAtual = this.getParameter('sysparm_cargo_atual');
+        var cargoAnterior = this.getParameter('sysparm_cargo_anterior');
+
+        var grupos = {
+            'estagiario': 'b4377b48c384e2106f5a784ed4013160',
+            'gestores': 'b028b308c384e2106f5a784ed401316f',
+            'monitores': 'c538bb48c384e2106f5a784ed40131b1'
+        };
+
+        var grupoAnteriorExiste = false;
+
+        if (cargoAnterior &amp;&amp; grupos[cargoAnterior]) {
+            var grCheck = new GlideRecord('sys_user_grmember');
+            grCheck.addQuery('user', userId);
+            grCheck.addQuery('group', grupos[cargoAnterior]);
+            grCheck.query();
+
+            if (grCheck.next()) {
+                grupoAnteriorExiste = true;
+            }
+
+            // Se o usuário estava no grupo anterior, remover ele
+            if (grupoAnteriorExiste) {
+                var grDelete = new GlideRecord('sys_user_grmember');
+                grDelete.addQuery('user', userId);
+                grDelete.addQuery('group', grupos[cargoAnterior]);
+                grDelete.query();
+                while (grDelete.next()) {
+                    grDelete.deleteRecord();
+                }
+            }
+        }
+
+        // Se o usuário já estava em um grupo e foi removido ou não tinha grupo antes, adiciona ao novo grupo
+        if (cargoAtual &amp;&amp; grupos[cargoAtual]) {
+            var grInsert = new GlideRecord('sys_user_grmember');
+            grInsert.initialize();
+            grInsert.setValue('group', grupos[cargoAtual]);
+            grInsert.setValue('user', userId);
+            grInsert.insert();
+        }
+
+        return 'Usuário atualizado com sucesso';
+    }
+});
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-26 17:24:00&lt;/sys_created_on&gt;&lt;sys_id&gt;aa1a5cd0c348e2106f5a784ed4013178&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;AtualizaGrupoUsuario&lt;/sys_name&gt;&lt;sys_package display_value="Mock Skillup" source="x_1593770_mock_ski"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Mock Skillup"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_aa1a5cd0c348e2106f5a784ed4013178&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-26 17:24:00&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;aa1a5cd0c348e2106f5a784ed4013178&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-26 17:24:00&lt;/sys_created_on&gt;&lt;sys_id&gt;2c7a50d0c348e2106f5a784ed40131e4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-26 17:24:00&lt;/sys_updated_on&gt;&lt;table&gt;sys_script_include&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1450325260</payload_hash>
+        <record_name>AtualizaGrupoUsuario</record_name>
+        <reverted_from/>
+        <source>95cd95abc33712106f5a784ed40131bf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 17:24:01</sys_created_on>
+        <sys_id>647a1414c348e2106f5a784ed4013139</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195434970130000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 17:24:01</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>687a1414e948e2108c757d7db6b36938</update_guid>
+        <update_guid_history>687a1414e948e2108c757d7db6b36938:1450325260</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 17:24:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>0164443d995b47879948a763e3af3279</sys_id>
+        <sys_metadata>aa1a5cd0c348e2106f5a784ed4013178</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AtualizaGrupoUsuario</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sys_script_include_aa1a5cd0c348e2106f5a784ed4013178</sys_update_name>
+        <sys_update_version display_value="sys_script_include_aa1a5cd0c348e2106f5a784ed4013178">647a1414c348e2106f5a784ed4013139</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 17:24:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b4bf1d2fc33712106f5a784ed4013194" label="Cursos" max_length="40" name="x_1593770_mock_ski_cursos" type="collection">
+        <element label="Order" max_length="40" name="order" type="integer"/>
+        <element label="Template" max_length="40" name="template" type="string"/>
+        <element label="Duracao" max_length="40" name="duracao" type="glide_duration"/>
+        <element display="true" label="Treinamento" max_length="40" name="treinamento" type="string"/>
+    </element>
+</database>
