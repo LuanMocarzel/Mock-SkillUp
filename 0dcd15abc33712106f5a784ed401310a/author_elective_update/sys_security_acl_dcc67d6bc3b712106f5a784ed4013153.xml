@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>allow</decision_type>
+        <description>Default access control on x_1593770_mock_ski_aviso</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1593770_mock_ski_aviso</name>
+        <operation display_value="delete">delete</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-24 16:11:52</sys_created_on>
+        <sys_id>dcc67d6bc3b712106f5a784ed4013153</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_1593770_mock_ski_aviso</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sys_security_acl_dcc67d6bc3b712106f5a784ed4013153</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-10 11:38:18</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_es_latest_script action="DELETE">
+        <id>dcc67d6bc3b712106f5a784ed4013153</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-07 16:02:04</sys_created_on>
+        <sys_id>bffddacfc30422106f5a784ed4013127</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-07 16:02:04</sys_updated_on>
+        <table>sys_security_acl</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sys_security_acl_dcc67d6bc3b712106f5a784ed4013153</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><decision_type>allow</decision_type><description>Default access control on x_1593770_mock_ski_aviso</description><local_or_existing>Local</local_or_existing><name>x_1593770_mock_ski_aviso</name><operation display_value="delete">delete</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-24 16:11:52</sys_created_on><sys_id>dcc67d6bc3b712106f5a784ed4013153</sys_id><sys_mod_count>3</sys_mod_count><sys_name>x_1593770_mock_ski_aviso</sys_name><sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package><sys_policy/><sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope><sys_update_name>sys_security_acl_dcc67d6bc3b712106f5a784ed4013153</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-10 11:38:18</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_es_latest_script action="INSERT_OR_UPDATE"><id>dcc67d6bc3b712106f5a784ed4013153</id><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-07 16:02:04</sys_created_on><sys_id>bffddacfc30422106f5a784ed4013127</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-07 16:02:04</sys_updated_on><table>sys_security_acl</table><use_es_latest>true</use_es_latest></sys_es_latest_script></record_update>]]></payload>
+        <payload_hash>662474224</payload_hash>
+        <record_name>x_1593770_mock_ski_aviso</record_name>
+        <reverted_from/>
+        <source>32c9eecfc34422106f5a784ed40131a8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-10 11:38:18</sys_created_on>
+        <sys_id>ad6efc00c35022106f5a784ed4013136</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1957fd93f930000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-10 11:38:18</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>256efc00a050221097fec48ccbc68836</update_guid>
+        <update_guid_history>256efc00a050221097fec48ccbc68836:662474224,d63e5acf1c042210d379e1fb73f63b3b:939366871,480e1603854422108d906c68579aef35:655199532,50c67d6b5ab71210458babda6eb40156:-583041762</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-10 11:39:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>1c562b08dd6d47b39497e358da930199</sys_id>
+        <sys_metadata>dcc67d6bc3b712106f5a784ed4013153</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1593770_mock_ski_aviso</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent display_value="x_1593770_mock_ski_aviso">5cc67d6bc3b712106f5a784ed401315a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sys_security_acl_dcc67d6bc3b712106f5a784ed4013153</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_dcc67d6bc3b712106f5a784ed4013153">ad6efc00c35022106f5a784ed4013136</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-10 11:39:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
