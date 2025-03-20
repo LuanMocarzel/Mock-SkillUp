@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="82b22d63c37712106f5a784ed401318f" extends="task" label="Projetos" max_length="40" name="x_1593770_mock_ski_projetos" type="collection">
-        <element label="Nome do Projeto" max_length="40" name="nome_do_projeto" type="string"/>
+        <element display="true" label="Nome do Projeto" max_length="40" name="nome_do_projeto" type="string"/>
         <element label="Diferenca de Orcamento" max_length="20" name="diferenca_de_orcamento" read_only="true" type="currency"/>
         <element label="Manager" mandatory="true" max_length="32" name="manager" reference="x_1593770_mock_ski_equipe" reference_qual="cargo=gestores^ORcargo=Monitores" reference_qual_condition="cargo=gestores^ORcargo=Monitores" type="reference"/>
         <element label="Motivo do Cancelamento" max_length="40" name="motivo_do_cancelamento" type="string"/>

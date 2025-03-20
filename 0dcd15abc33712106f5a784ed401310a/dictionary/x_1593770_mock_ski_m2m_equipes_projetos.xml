@@ -3,11 +3,11 @@
         <element attributes="encode_utf8=false" label="Projetos" max_length="32" name="x_1593770_mock_ski_projetos" reference="x_1593770_mock_ski_projetos" type="reference"/>
         <element label="Tarefa" max_length="32" name="tarefa" reference="x_1593770_mock_ski_tarefa" type="reference"/>
         <element attributes="encode_utf8=false" label="Estagiario" max_length="32" name="x_1593770_mock_ski_equipe" reference="x_1593770_mock_ski_equipe" reference_qual="cargo=estagiario^EQ" reference_qual_condition="cargo=estagiario^EQ" type="reference"/>
-        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+        <element choice="1" choice_field="state" choice_table="x_1593770_mock_ski_projetos" label="Status" max_length="40" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="aberto" value="aberto"/>
-                <element inactive_on_update="false" label="Em andamento" value="em andamento"/>
-                <element inactive_on_update="false" label="Concluido" value="concluido"/>
+                <element inactive="true" inactive_on_update="true" label="aberto" value="aberto"/>
+                <element inactive="true" inactive_on_update="true" label="Em andamento" value="em andamento"/>
+                <element inactive="true" inactive_on_update="true" label="Concluido" value="concluido"/>
             </choice>
         </element>
         <index name="index">

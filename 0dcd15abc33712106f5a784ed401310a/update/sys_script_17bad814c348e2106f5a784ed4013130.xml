@@ -5,7 +5,7 @@
         <action_delete>false</action_delete>
         <action_insert>true</action_insert>
         <action_query>false</action_query>
-        <action_update>false</action_update>
+        <action_update>true</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
@@ -35,22 +35,22 @@
         'gestor': 'b028b308c384e2106f5a784ed401316f',
         'monitor': 'c538bb48c384e2106f5a784ed40131b1'
     };
-
+ 
     var userId = current.getValue('sys_id');
     var cargoAtual = current.getValue('cargo');
     var cargoAnterior = previous.getValue('cargo');
-
+ 
     if (cargoAnterior && grupos[cargoAnterior]) {
         var grDelete = new GlideRecord('sys_user_grmember');
         grDelete.addQuery('user', userId);
         grDelete.addQuery('group', grupos[cargoAnterior]);
         grDelete.query();
-
+ 
         while (grDelete.next()) {
             grDelete.deleteRecord();
         }
     }
-
+ 
     if (cargoAtual && grupos[cargoAtual]) {
         var grInsert = new GlideRecord('sys_user_grmember');
         grInsert.initialize();
@@ -65,7 +65,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>17bad814c348e2106f5a784ed4013130</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name>cada uma vai pro seu canto</sys_name>
         <sys_overrides/>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
@@ -73,7 +73,7 @@
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sys_script_17bad814c348e2106f5a784ed4013130</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-27 15:47:13</sys_updated_on>
+        <sys_updated_on>2025-03-12 16:49:48</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

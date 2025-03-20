@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="479157b2c3dc2a106f5a784ed401314d" extends="sys_import_set_row" label="reporte bug" max_length="40" name="x_1593770_mock_ski_report_bugs" type="collection">
+        <element attributes="import_attribute_name=Linha" label="Linha " max_length="40" name="u_linha" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Passo a passo" label="Passo a passo " max_length="55" name="u_passo_a_passo" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Task" label="Task" max_length="40" name="u_task" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Projeto" label="Projeto" max_length="40" name="u_projeto" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Description" label="Description " max_length="58" name="u_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Short description" label="Short description" max_length="40" name="u_short_description" type="string"/>
+    </element>
+</database>

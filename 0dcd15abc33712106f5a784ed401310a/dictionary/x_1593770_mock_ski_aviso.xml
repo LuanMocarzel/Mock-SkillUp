@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="fb95392bc3b712106f5a784ed4013104" label="Aviso" max_length="40" name="x_1593770_mock_ski_aviso" type="collection">
         <element label="Ativo" max_length="40" name="ativo" type="boolean"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice_field="cargo" choice_table="x_1593770_mock_ski_equipe" default="javascript: gs.getUserID();" label="Criado por" max_length="32" name="criado_por" reference="x_1593770_mock_ski_equipe" type="reference" use_dependent_field="true"/>
         <element label="Projeto" mandatory="true" max_length="32" name="projeto" reference="x_1593770_mock_ski_projetos" type="reference"/>
         <element label="Descricao" mandatory="true" max_length="40" name="descricao" type="string"/>
         <element choice="1" label="Categoria" mandatory="true" max_length="40" name="categoria" type="choice">
@@ -9,9 +10,12 @@
                 <element inactive_on_update="false" label="evento" sequence="0" value="evento"/>
             </choice>
         </element>
-        <element label="Aviso" mandatory="true" max_length="40" name="aviso" type="string"/>
+        <element display="true" label="Aviso" mandatory="true" max_length="40" name="aviso" type="string"/>
         <element label="Urgente" max_length="40" name="urgente" type="boolean"/>
         <index name="index">
+            <element name="criado_por"/>
+        </index>
+        <index name="index2">
             <element name="projeto"/>
         </index>
     </element>

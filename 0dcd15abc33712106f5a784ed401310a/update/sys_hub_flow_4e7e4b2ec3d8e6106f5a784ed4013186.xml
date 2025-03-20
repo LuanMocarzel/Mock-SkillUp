@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=1143000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>avisos_urgentes__microsoft_team</internal_name>
+        <label_cache>[{"name":"Created_1.current.descricao","label":"Trigger - Record Created➛Aviso Record➛Descricao","reference":"","reference_display":"Descricao","type":"string","base_type":"string","parent_table_name":"x_1593770_mock_ski_aviso","column_name":"descricao","usedInstances":{"8bbf211e-db7d-4444-a9d6-6f592cf80a62":["ah_message"]}},{"name":"Created_1.current.aviso","label":"Trigger - Record Created➛Aviso Record➛Aviso","reference":"","reference_display":"Aviso","type":"string","base_type":"string","parent_table_name":"x_1593770_mock_ski_aviso","column_name":"aviso","usedInstances":{"8bbf211e-db7d-4444-a9d6-6f592cf80a62":["ah_title"]}}]</label_cache>
+        <master_snapshot>9dd293a2c31ce6106f5a784ed4013135</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Avisos Urgentes - Microsoft Team</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>11d293a2c31ce6106f5a784ed401316d</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:32:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4e7e4b2ec3d8e6106f5a784ed4013186</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Avisos Urgentes - Microsoft Team</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sys_hub_flow_4e7e4b2ec3d8e6106f5a784ed4013186</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1593770_mock_ski_aviso">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:51:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>11d293a2c31ce6106f5a784ed401316d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+        <table>x_1593770_mock_ski_aviso</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>4e7e4b2ec3d8e6106f5a784ed4013186</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:51:38</sys_created_on>
+        <sys_id>5dd293a2c31ce6106f5a784ed401316d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+        <trigger display_value="">11d293a2c31ce6106f5a784ed401316d</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=4e7e4b2ec3d8e6106f5a784ed4013186^sys_idNOT IN5dd293a2c31ce6106f5a784ed401316d"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=4e7e4b2ec3d8e6106f5a784ed4013186^sys_idNOT IN8a7e8b2ec3d8e6106f5a784ed40131f2"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>4e7e4b2ec3d8e6106f5a784ed4013186</id>
+        <name>Avisos Urgentes - Microsoft Team</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:32:34</sys_created_on>
+        <sys_id>8a7e8b2ec3d8e6106f5a784ed40131f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:32:34</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=8a7e8b2ec3d8e6106f5a784ed40131f2"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=4e7e4b2ec3d8e6106f5a784ed4013186^sys_idNOT IN32a25f62c31ce6106f5a784ed4013181,7ea2dbaec3d8e6106f5a784ed401312e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Avisos Urgentes - Microsoft Team">4e7e4b2ec3d8e6106f5a784ed4013186</model>
+        <model_id>4e7e4b2ec3d8e6106f5a784ed4013186</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_4e7e4b2ec3d8e6106f5a784ed4013186</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:50:55</sys_created_on>
+        <sys_id>32a25f62c31ce6106f5a784ed4013181</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:50:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=32a25f62c31ce6106f5a784ed4013181"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Avisos Urgentes - Microsoft Team">4e7e4b2ec3d8e6106f5a784ed4013186</model>
+        <model_id>4e7e4b2ec3d8e6106f5a784ed4013186</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_4e7e4b2ec3d8e6106f5a784ed4013186</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:50:55</sys_created_on>
+        <sys_id>7ea2dbaec3d8e6106f5a784ed401312e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:50:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7ea2dbaec3d8e6106f5a784ed401312e"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=4e7e4b2ec3d8e6106f5a784ed4013186^sys_idNOT INb2a25f62c31ce6106f5a784ed40131c9"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Avisos Urgentes - Microsoft Team">4e7e4b2ec3d8e6106f5a784ed4013186</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:50:55</sys_created_on>
+        <sys_id>b2a25f62c31ce6106f5a784ed40131c9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:37</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VYW0/jOBT+K1GedqSulEtLKG8MMFqk2UHbMrsPiI2cxG4tXLsbO4HOiP++x7m0aS6lNwZ4Qart+Hzn83e+Y3P302QowMw8M29RwLDZMylXOOaI3S7mGIaVHvY5mum5GeIRUiJemGcqTnDPFHGEY/PM7pkpYgkeL+R1BB/B0uyL4nOzmIbfT749GLqeZ/kzET748oH6KKVSwJKIyjlDi7+LlefFcDilLIoxN8/u7nvmHMWwsdJBf9amqI4ckhANHWyFru06jmU5p307OHED24lchC0LNqwnXEOqWvJepYmfFOYRhlAEMYlbKIkxim44WyxXTIHRnJMZepL0B+x+aul1BAP2EOdzy59+wUM+HE4FDfHNXFHB85EcZz4pWDLj33L8mkFMUMJUySCMJBL2w3MNWYMoEJHxVDyOyoBfKM+yKyaZCBFb/kJKxTRIFJaacEIZUO/n3EiRxBn60dXFzejS/+f89uKPq5E/uhrfjq4vbq8uzecsL/+/RO+YIyyw+Hk6z8tj/0Ix0wcoF9KHk+yZMozpXJ2Hiqa4gPPcW8n1QvCIZqw0JBuWU3JdskVK5WFaVqdqw8rmpXL/vfqrKdJ8cDeJnpwgFGHUIdGAVCRaTbIFmmrJt5rdJrEWI9uotW9Zb6TXvKL2lutMRJhdrrYzYXIyAQFTPk+UZusRcSV9JXwURX6FR70UML2k3zy35xfFGiccPvCX59GUbEbbkr+vVALcOyi4kptsS5gnX4stRwk3BBwc/DHCJAZqlFFaGLmeoUnBKBljhkNVEQH5Lqu//qRSUj6poF4GzThoxFyGAzEZZUp5bHlg8Ps967XJb1rjrVa3OxetbRMSYOJYni5Z23IDYlueNUAkci0rdCpF2wTTiVLVTv9Vine30pWZ7tgWKqtTXIC3qsLfSjHputxKErQaCoe4OA40+0jQHA2t5nTuTla3lGU+fLmuzk2pHbmjoyhF8EW0reNtaXaEiUdw2T2MLkDhwyQWCY/qzqP3NCg3ViuM3wr+Ph3R9IiI8WYA6yveyO5WDJcaRXxxBKNziR0McR9b4G8uWFswGA6DEDmEeCceduya0a1gtGL7EAb3grDSNmV2mV2rRtI2ae1gcwcAbFjezgAPN7tCmK1Wl899DFN7nGLuA9TYZ9q2Gt42YTTC5dzehd2Ikq5K+dDiJqfDcGB7XujBswOKm/RxgOy+M0BD78Q9HdSKuwFlE0zVQsIveYzoF6MG0lH43/Op9/WQfk2FSqyUbjK7914Ot9PsG5QHqfQ/fSxG5h8iNr4J/vv1ap0xxtDWshfpsZrwNij0wRqvCyMQatq4BUDozzC+FlrfHjtYecs3UU0P6XpaB7+JcP90MCRuu5uQYZubrMB0w3z3l4YtiyHtLKu228O22k5bS6Sz3e+h1ppMqveADReVY5FiH50U5/VIcQ++HJW12PkQ3AfsB+pW2RXikJalY2JfkKpPXwoDJgwIYlBiFP/1g3d9sDDUFAOlDG7BENDQ0Q816GrDaEJZKvjXAsnv1Y3GBcNGcVd6055UO/XjPmFx5KHBwO245Q7rT9g2QC/gffcdaucCSNvqaWOb2m3f+p6tjaqiznVFbNmCjpp1ex86LOvWTvRS1of3mE0P8BYU77R73P8Pan4cLq0eAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=4e7e4b2ec3d8e6106f5a784ed4013186^sys_idNOT INb2a25f62c31ce6106f5a784ed40131cb"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Post a Message">549822431324030039a039ed9344b085</action_type>
+        <action_type_parent display_value="Post a Message">23be39c713e0030039a039ed9344b058</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Avisos Urgentes - Microsoft Team">4e7e4b2ec3d8e6106f5a784ed4013186</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:50:55</sys_created_on>
+        <sys_id>b2a25f62c31ce6106f5a784ed40131cb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:50:55</sys_updated_on>
+        <ui_id>8bbf211e-db7d-4444-a9d6-6f592cf80a62</ui_id>
+        <values>H4sIAAAAAAAA/+2WyW7bMBCGXyVQLy1gyVooS8qpadq0KbI0aw9BIJAUaRGhlkqU7STIu3dkyXYdx44PRuGDDz5wyOH8/8xngXfPmoi0fa3nB75tI8dybGQ6pukEGH4sChyEiOn7WkdLccLgJI7DISNxlj2EVSEhPsCyqjdipfJyv9tlI1WwhEWiLxSWRnvYyDgXlBk0S7ptiNhdG/WohZmluyb1dWT7XCc0oDoPkN/zbEqo6X2OPNcjhLg648jSUc+OdGxyVw8I8iNke8Qhfvc4hZtF2v/d3N21sWVjFwUO8SxELIx903FJ4HqugxzXo13PcV2bRkjnNsc6CmigE2JBER971PUdDhndW/v48tu1l+SHJ0UsL/iXq/5N8et7WZ5fp0PTfXC/Z8c/ydmV81RdPFjQjEiUucSPt7uezHpCYyGjgqXa/t19R8txASApVmj7z6+21GPOQokJk9C6K1WAdEhfl89JYut27+byZAW1dS2Il5MqWRHVksyOBrNiacSgKseyZB0twWmEVVY8TiMFw9F5KmeBWKQKbtPqw6NSPMHVvmma9UnOwB9lze50GbagNGEaZ8DBea5EljYRhYlsc2gmqyQ9a3zUiDGOK6kmiEGkKuE+lteqaxmtJn4VZ8PLScEjkY4Ntpsyo1hOV1hBG0ilWFkPhUlANVVhgvMcmhPmRTYQ42TQkhh9CQuDy2wIRUvRTw1Ma+EGNAkbRxD/Og7f4kLULk7hGkh+GbsP/1R13cZHqzhsTMOBkhYiVwdw3YC14l467ReKo1UEEDI3ayUUtG/2bXp+PoSZKRaFlkGrAjqiDDwQZfbysvinXX14EzSv4WWSeN06WfS2hGBrR/CWEkzMVVOn3tyUE1aWuP8ewyAfClK8NsfzCZtgeQ1Xk8TTqae3fC7h2d7xvKU8Oyu/YhGfm3Oj6NWTcZHZDUG5hrRJ4sFY2MJrYU7vEjSdHZpbiqbvrpo/994a9TjwH9hcQ9srNs8aZcsUL6ET7ejcUjqRFfi9pQSYzvxzLwYLIXQuK8KYjcJ/EP0Ah0kvWCR1trEJYNeQO32t1mL3Dmuxex9/sNGn96wsYdfdsbtl7N7/BbnacMwqEgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_4e7e4b2ec3d8e6106f5a784ed4013186^sys_idNOT IN36a25f62c31ce6106f5a784ed4013183,3ea25f62c31ce6106f5a784ed401317f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4e7e4b2ec3d8e6106f5a784ed4013186</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:50:55</sys_created_on>
+        <sys_id>36a25f62c31ce6106f5a784ed4013183</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:50:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4e7e4b2ec3d8e6106f5a784ed4013186</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:50:55</sys_created_on>
+        <sys_id>3ea25f62c31ce6106f5a784ed401317f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:50:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_4e7e4b2ec3d8e6106f5a784ed4013186"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>avisos_urgentes__microsoft_team</internal_name>
+        <label_cache>[{"name":"Created_1.current.descricao","label":"Trigger - Record Created➛Aviso Record➛Descricao","reference":"","reference_display":"Descricao","type":"string","base_type":"string","parent_table_name":"x_1593770_mock_ski_aviso","column_name":"descricao","usedInstances":{"8bbf211e-db7d-4444-a9d6-6f592cf80a62":["ah_message"]}},{"name":"Created_1.current.aviso","label":"Trigger - Record Created➛Aviso Record➛Aviso","reference":"","reference_display":"Aviso","type":"string","base_type":"string","parent_table_name":"x_1593770_mock_ski_aviso","column_name":"aviso","usedInstances":{"8bbf211e-db7d-4444-a9d6-6f592cf80a62":["ah_title"]}}]</label_cache>
+        <master>true</master>
+        <name>Avisos Urgentes - Microsoft Team</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Avisos Urgentes - Microsoft Team">4e7e4b2ec3d8e6106f5a784ed4013186</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:51:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9dd293a2c31ce6106f5a784ed4013135</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_variable_value action="delete_multiple" query="document_key=9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=9dd293a2c31ce6106f5a784ed4013135^sys_idNOT IN59d293a2c31ce6106f5a784ed4013136"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>9dd293a2c31ce6106f5a784ed4013135</id>
+        <name>Avisos Urgentes - Microsoft Team</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:51:38</sys_created_on>
+        <sys_id>59d293a2c31ce6106f5a784ed4013136</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=59d293a2c31ce6106f5a784ed4013136"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=9dd293a2c31ce6106f5a784ed4013135^sys_idNOT INd5d293a2c31ce6106f5a784ed4013143,d9d293a2c31ce6106f5a784ed4013137"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Avisos Urgentes - Microsoft Team">9dd293a2c31ce6106f5a784ed4013135</model>
+        <model_id>9dd293a2c31ce6106f5a784ed4013135</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_9dd293a2c31ce6106f5a784ed4013135</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:51:38</sys_created_on>
+        <sys_id>d5d293a2c31ce6106f5a784ed4013143</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d5d293a2c31ce6106f5a784ed4013143"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Avisos Urgentes - Microsoft Team">9dd293a2c31ce6106f5a784ed4013135</model>
+        <model_id>9dd293a2c31ce6106f5a784ed4013135</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_9dd293a2c31ce6106f5a784ed4013135</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:51:38</sys_created_on>
+        <sys_id>d9d293a2c31ce6106f5a784ed4013137</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d9d293a2c31ce6106f5a784ed4013137"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=9dd293a2c31ce6106f5a784ed4013135^sys_idNOT IN19d293a2c31ce6106f5a784ed401314f"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Avisos Urgentes - Microsoft Team">9dd293a2c31ce6106f5a784ed4013135</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:51:38</sys_created_on>
+        <sys_id>19d293a2c31ce6106f5a784ed401314f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VYW0/jOBT+K1GedqSulEtLKG8MMFqk2UHbMrsPiI2cxG4tXLsbO4HOiP++x7m0aS6lNwZ4Qart+Hzn83e+Y3P302QowMw8M29RwLDZMylXOOaI3S7mGIaVHvY5mum5GeIRUiJemGcqTnDPFHGEY/PM7pkpYgkeL+R1BB/B0uyL4nOzmIbfT749GLqeZ/kzET748oH6KKVSwJKIyjlDi7+LlefFcDilLIoxN8/u7nvmHMWwsdJBf9amqI4ckhANHWyFru06jmU5p307OHED24lchC0LNqwnXEOqWvJepYmfFOYRhlAEMYlbKIkxim44WyxXTIHRnJMZepL0B+x+aul1BAP2EOdzy59+wUM+HE4FDfHNXFHB85EcZz4pWDLj33L8mkFMUMJUySCMJBL2w3MNWYMoEJHxVDyOyoBfKM+yKyaZCBFb/kJKxTRIFJaacEIZUO/n3EiRxBn60dXFzejS/+f89uKPq5E/uhrfjq4vbq8uzecsL/+/RO+YIyyw+Hk6z8tj/0Ix0wcoF9KHk+yZMozpXJ2Hiqa4gPPcW8n1QvCIZqw0JBuWU3JdskVK5WFaVqdqw8rmpXL/vfqrKdJ8cDeJnpwgFGHUIdGAVCRaTbIFmmrJt5rdJrEWI9uotW9Zb6TXvKL2lutMRJhdrrYzYXIyAQFTPk+UZusRcSV9JXwURX6FR70UML2k3zy35xfFGiccPvCX59GUbEbbkr+vVALcOyi4kptsS5gnX4stRwk3BBwc/DHCJAZqlFFaGLmeoUnBKBljhkNVEQH5Lqu//qRSUj6poF4GzThoxFyGAzEZZUp5bHlg8Ps967XJb1rjrVa3OxetbRMSYOJYni5Z23IDYlueNUAkci0rdCpF2wTTiVLVTv9Vine30pWZ7tgWKqtTXIC3qsLfSjHputxKErQaCoe4OA40+0jQHA2t5nTuTla3lGU+fLmuzk2pHbmjoyhF8EW0reNtaXaEiUdw2T2MLkDhwyQWCY/qzqP3NCg3ViuM3wr+Ph3R9IiI8WYA6yveyO5WDJcaRXxxBKNziR0McR9b4G8uWFswGA6DEDmEeCceduya0a1gtGL7EAb3grDSNmV2mV2rRtI2ae1gcwcAbFjezgAPN7tCmK1Wl899DFN7nGLuA9TYZ9q2Gt42YTTC5dzehd2Ikq5K+dDiJqfDcGB7XujBswOKm/RxgOy+M0BD78Q9HdSKuwFlE0zVQsIveYzoF6MG0lH43/Op9/WQfk2FSqyUbjK7914Ot9PsG5QHqfQ/fSxG5h8iNr4J/vv1ap0xxtDWshfpsZrwNij0wRqvCyMQatq4BUDozzC+FlrfHjtYecs3UU0P6XpaB7+JcP90MCRuu5uQYZubrMB0w3z3l4YtiyHtLKu228O22k5bS6Sz3e+h1ppMqveADReVY5FiH50U5/VIcQ++HJW12PkQ3AfsB+pW2RXikJalY2JfkKpPXwoDJgwIYlBiFP/1g3d9sDDUFAOlDG7BENDQ0Q816GrDaEJZKvjXAsnv1Y3GBcNGcVd6055UO/XjPmFx5KHBwO245Q7rT9g2QC/gffcdaucCSNvqaWOb2m3f+p6tjaqiznVFbNmCjpp1ex86LOvWTvRS1of3mE0P8BYU77R73P8Pan4cLq0eAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=9dd293a2c31ce6106f5a784ed4013135^sys_idNOT IN51d293a2c31ce6106f5a784ed401314f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Post a Message">549822431324030039a039ed9344b085</action_type>
+        <action_type_parent display_value="Post a Message">23be39c713e0030039a039ed9344b058</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>549822431324030039a039ed9344b085</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Avisos Urgentes - Microsoft Team">9dd293a2c31ce6106f5a784ed4013135</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:51:38</sys_created_on>
+        <sys_id>51d293a2c31ce6106f5a784ed401314f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+        <ui_id>8bbf211e-db7d-4444-a9d6-6f592cf80a62</ui_id>
+        <values>H4sIAAAAAAAA/+2WTW/bOBCG/0qgvewClqwPypJyatfddrNIkzZJ00NRCCRFWkSojyWpfNTIf9+RJdt13LoWsCfDBx84nCHfGT+vwC9zS2TWqTWJk9j3UeAFPnID1w0SDD+WJQFCxI1ja2SVuGCQifP0gZG8qu7SRkmI32PZtBu5MbU+HY/Zo1GsYJmYCYOl0yc7FeeCModWxbgPEX/sown1MPPs0KWxjfyY24Qm1OYJiieRTwl1o1dZFEaEkNBmHHk2mviZjV0e2glBcYb8iAQkHp+VcLIoZ5+7s8c+9nwcoiQgkYeIh3HsBiFJwigMUBBGdBwFYejTDNnc59hGCU1sQjy4JMYRDeOAQ8X41j+7+usmKurpucrlR/7n9eyT+vBO68ub8sEN78J31dk/5OI6+NZ8vPNgGJnQtcRPt8eZrGdCcyEzxUrr9MvXkVVjBSAZpqzT+YutfUmUmDAJqX1fJ5+uznfwaZ7qNq6NglH06/P+hOtlsFJZq8gdWfBXsTJjIIVjqdnIKnCZYVOpp1VEMZxdlnIdyEVp4DSrTX7U4hvcF7uu22ZyBu1R1u2ulmnPSRfmb7DBIKWhplF9Ks0rQEN3g8kYx4000+9jXcJlbURVdiUGE7msrmRTlBfdRKzVAUssIdJoEMHqttVWe98Iv86rh6ulyreiXEyl35QVxXK1wgZmRxrT6plbTALepUkLXNcw0bRW1b1YFIOWwplJWDhcVg9wqRaz0sG0Fe7AZLHzFuJvFuFbrETbxXs4BoqfR5Z+0lOJtV73AkNM/21aJV1nfQ9pN4a2hCpRm9dwwT3r5T6P+u8cR7voImSDIyMMDHT9hZvPp/DXG5alnkMbBTMyDr4Xunp+3rb+7uRhnthD9dITN73m7S6G+MA7+uCwfUDcXUTRaIOggmmNZ79yAjQEF1K8txs2C4Y5Yg/9S0e8X6n/UUdDXOEfXXHYrgh2fmczvsFQp/HFI3ib/MFo7yFiifbrhYSt98+GsiGAB0fADxvwONzFFo9+hNEi8L8SvoeKF4RfdBp+pm0I4+jI+GEzjrwknvyULjfYfBzn0FQKs6xUmrPH9DvQf4NkMkm2eV9vDMN+D2GrV3wr62Tayjr5/W/2+MevRA9xQHh0wGE64Ot/CeAc684TAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_9dd293a2c31ce6106f5a784ed4013135^sys_idNOT IN1dd293a2c31ce6106f5a784ed4013147,5dd293a2c31ce6106f5a784ed4013140"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9dd293a2c31ce6106f5a784ed4013135</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:51:38</sys_created_on>
+        <sys_id>1dd293a2c31ce6106f5a784ed4013147</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9dd293a2c31ce6106f5a784ed4013135</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:51:38</sys_created_on>
+        <sys_id>5dd293a2c31ce6106f5a784ed4013140</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_9dd293a2c31ce6106f5a784ed4013135"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>4e7e4b2ec3d8e6106f5a784ed4013186</sys_id>
+        <latest_snapshot>9dd293a2c31ce6106f5a784ed4013135</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=4e7e4b2ec3d8e6106f5a784ed4013186^sys_idNOT IN51d293a2c31ce6106f5a784ed401316f"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>4e7e4b2ec3d8e6106f5a784ed4013186</plan_id>
+        <snapshot>9dd293a2c31ce6106f5a784ed4013135</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 16:51:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>51d293a2c31ce6106f5a784ed401316f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 16:51:38</sys_updated_on>
+        <trigger display_value="">11d293a2c31ce6106f5a784ed401316d</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=4e7e4b2ec3d8e6106f5a784ed4013186"/>
+</record_update>

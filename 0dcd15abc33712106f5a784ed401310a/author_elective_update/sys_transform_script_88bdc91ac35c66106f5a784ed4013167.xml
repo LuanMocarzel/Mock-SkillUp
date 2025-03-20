@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="DELETE">
+        <active>true</active>
+        <map display_value="Report Bugs">a0ca0556c35c66106f5a784ed401314b</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, target, log, map /*undefined onStart*/ ) {
+
+    var projetoNome = source.u_projeto ? source.u_projeto.trim().toLowerCase() : "";
+    var taskNome = source.u_task ? source.u_task.trim().toLowerCase() : "";
+
+    log.info("Verificando Projeto: " + projetoNome + " | Tarefa: " + taskNome);
+
+    var projetoGR = new GlideRecord('x_1593770_mock_ski_projetos');
+    projetoGR.addQuery('nome_do_projeto', projetoNome);
+    projetoGR.query();
+
+    if (projetoGR.next()) {
+        var idProjeto = projetoGR.getUniqueValue();
+        log.info("Projeto encontrado! ID: " + idProjeto);
+
+       var taskGR = new GlideRecord('x_1593770_mock_ski_tarefa');
+        taskGR.addQuery('nome_da_tarefa', taskNome);
+        taskGR.addQuery('projeto', idProjeto); // Filtra pelo projeto correto
+        taskGR.query();
+
+        if (taskGR.next()) {
+            log.info("Tarefa encontrada! A linha será inserida.");
+        } else {
+            ignore = true;
+            log.error("Transformação ignorada - Tarefa não encontrada para o Projeto: " + projetoNome + " | Tarefa: " + taskNome);
+        }
+    } else {
+        ignore = true;
+        gs.error("Transformação ignorada - Projeto não encontrado: " + projetoNome);
+    }
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 12:46:13</sys_created_on>
+        <sys_id>88bdc91ac35c66106f5a784ed4013167</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>onBefore</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sys_transform_script_88bdc91ac35c66106f5a784ed4013167</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 12:46:13</sys_updated_on>
+        <when>onBefore</when>
+    </sys_transform_script>
+    <sys_es_latest_script action="DELETE">
+        <id>88bdc91ac35c66106f5a784ed4013167</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 12:46:12</sys_created_on>
+        <sys_id>241115d6c35c66106f5a784ed40131ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-17 12:46:12</sys_updated_on>
+        <table>sys_transform_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sys_transform_script_88bdc91ac35c66106f5a784ed4013167</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_script"&gt;&lt;sys_transform_script action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;map display_value="Report Bugs"&gt;a0ca0556c35c66106f5a784ed401314b&lt;/map&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[(function runTransformScript(source, target, log, map /*undefined onStart*/ ) {
+
+    var projetoNome = source.u_projeto ? source.u_projeto.trim().toLowerCase() : "";
+    var taskNome = source.u_task ? source.u_task.trim().toLowerCase() : "";
+
+    log.info("Verificando Projeto: " + projetoNome + " | Tarefa: " + taskNome);
+
+    var projetoGR = new GlideRecord('x_1593770_mock_ski_projetos');
+    projetoGR.addQuery('nome_do_projeto', projetoNome);
+    projetoGR.query();
+
+    if (projetoGR.next()) {
+        var idProjeto = projetoGR.getUniqueValue();
+        log.info("Projeto encontrado! ID: " + idProjeto);
+
+       var taskGR = new GlideRecord('x_1593770_mock_ski_tarefa');
+        taskGR.addQuery('nome_da_tarefa', taskNome);
+        taskGR.addQuery('projeto', idProjeto); // Filtra pelo projeto correto
+        taskGR.query();
+
+        if (taskGR.next()) {
+            log.info("Tarefa encontrada! A linha será inserida.");
+        } else {
+            ignore = true;
+            log.error("Transformação ignorada - Tarefa não encontrada para o Projeto: " + projetoNome + " | Tarefa: " + taskNome);
+        }
+    } else {
+        ignore = true;
+        gs.error("Transformação ignorada - Projeto não encontrado: " + projetoNome);
+    }
+})(source, map, log, target);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_transform_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-17 12:46:13&lt;/sys_created_on&gt;&lt;sys_id&gt;88bdc91ac35c66106f5a784ed4013167&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;onBefore&lt;/sys_name&gt;&lt;sys_package display_value="Mock Skillup" source="x_1593770_mock_ski"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock Skillup"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_script_88bdc91ac35c66106f5a784ed4013167&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-17 12:46:13&lt;/sys_updated_on&gt;&lt;when&gt;onBefore&lt;/when&gt;&lt;/sys_transform_script&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;88bdc91ac35c66106f5a784ed4013167&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-17 12:46:12&lt;/sys_created_on&gt;&lt;sys_id&gt;241115d6c35c66106f5a784ed40131ec&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-17 12:46:12&lt;/sys_updated_on&gt;&lt;table&gt;sys_transform_script&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-809330879</payload_hash>
+        <record_name>onBefore</record_name>
+        <reverted_from/>
+        <source>c1870662c354e6106f5a784ed4013193</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-17 12:46:13</sys_created_on>
+        <sys_id>a811d91ec35c66106f5a784ed401319e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_recorded_at>195a423ef310000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-18 11:22:35</sys_updated_on>
+        <type>Transform Script</type>
+        <update_guid>ac11d91eff5c6610ccd06f6c45ad829d</update_guid>
+        <update_guid_history>ac11d91eff5c6610ccd06f6c45ad829d:-809330879</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-19 10:49:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_script">sys_transform_script</sys_db_object>
+        <sys_id>3122f5b5f2d04249b9fb1be5e284ef19</sys_id>
+        <sys_metadata>88bdc91ac35c66106f5a784ed4013167</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>onBefore</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent display_value="">a0ca0556c35c66106f5a784ed401314b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sys_transform_script_88bdc91ac35c66106f5a784ed4013167</sys_update_name>
+        <sys_update_version display_value="sys_transform_script_88bdc91ac35c66106f5a784ed4013167">a811d91ec35c66106f5a784ed401319e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-19 10:49:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

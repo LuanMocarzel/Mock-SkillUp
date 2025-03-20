@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1593770_mock_ski_equipe</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Define o manager automaticamente</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var dataAtual = new GlideDateTime();
+    var dataAdmissao = new GlideDateTime(current.data_de_admissao);
+    var diferencaMeses = (dataAtual.getYearUTC() - dataAdmissao.getYearUTC()) * 12 +
+        (dataAtual.getMonthUTC() - dataAdmissao.getMonthUTC());
+
+    var cargoAtual = current.getValue('cargo');
+    var novoCargo = (cargoAtual === 'estagiario' && diferencaMeses <= 3) ? 'monitor' : 'gestor';
+    var managerAtual = current.getValue('manager');
+
+    if (!managerAtual) {
+        atribuirManager(current, novoCargo);
+    } else {
+        // Se já tem um manager e ele é Monitor, mas passou dos 3 meses, troca por um Gerente
+        var managerRecord = new GlideRecord('x_1593770_mock_ski_equipe');
+        if (managerRecord.get(managerAtual) && managerRecord.getValue('cargo') === 'monitor' && diferencaMeses > 3) {
+            atribuirManager(current, 'gestor');
+        }
+    }
+})(current, previous);
+
+function atribuirManager(registro, cargo) {
+    var consultaGerente = new GlideRecord('x_1593770_mock_ski_equipe');
+    consultaGerente.addQuery('department', registro.getValue('department'));
+    consultaGerente.addQuery('cargo', cargo);
+    consultaGerente.query();
+
+    var gerentes = [];
+    while (consultaGerente.next()) {
+        gerentes.push(consultaGerente.getValue('sys_id'));
+    }
+
+    if (gerentes.length > 0) {
+        var indiceAleatorio = Math.floor(Math.random() * gerentes.length);
+        registro.setValue('manager', gerentes[indiceAleatorio]);
+        registro.update();
+    }
+}
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-27 12:56:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8176a86cc30c26106f5a784ed401318d</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>Define o manager automaticamente</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sys_script_8176a86cc30c26106f5a784ed401318d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-27 16:25:44</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=8176a86cc30c26106f5a784ed401318d"/>
+    <sys_es_latest_script action="DELETE">
+        <id>8176a86cc30c26106f5a784ed401318d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-27 12:56:37</sys_created_on>
+        <sys_id>9dd624acc30c26106f5a784ed40131b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-27 12:56:37</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sys_script_8176a86cc30c26106f5a784ed401318d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_1593770_mock_ski_equipe&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Define o manager automaticamente&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var dataAtual = new GlideDateTime();
+    var dataAdmissao = new GlideDateTime(current.data_de_admissao);
+    var diferencaMeses = (dataAtual.getYearUTC() - dataAdmissao.getYearUTC()) * 12 +
+        (dataAtual.getMonthUTC() - dataAdmissao.getMonthUTC());
+
+    var cargoAtual = current.getValue('cargo');
+    var novoCargo = (cargoAtual === 'estagiario' &amp;&amp; diferencaMeses &lt;= 3) ? 'monitor' : 'gestor';
+    var managerAtual = current.getValue('manager');
+
+    if (!managerAtual) {
+        atribuirManager(current, novoCargo);
+    } else {
+        // Se já tem um manager e ele é Monitor, mas passou dos 3 meses, troca por um Gerente
+        var managerRecord = new GlideRecord('x_1593770_mock_ski_equipe');
+        if (managerRecord.get(managerAtual) &amp;&amp; managerRecord.getValue('cargo') === 'monitor' &amp;&amp; diferencaMeses &gt; 3) {
+            atribuirManager(current, 'gestor');
+        }
+    }
+})(current, previous);
+
+function atribuirManager(registro, cargo) {
+    var consultaGerente = new GlideRecord('x_1593770_mock_ski_equipe');
+    consultaGerente.addQuery('department', registro.getValue('department'));
+    consultaGerente.addQuery('cargo', cargo);
+    consultaGerente.query();
+
+    var gerentes = [];
+    while (consultaGerente.next()) {
+        gerentes.push(consultaGerente.getValue('sys_id'));
+    }
+
+    if (gerentes.length &gt; 0) {
+        var indiceAleatorio = Math.floor(Math.random() * gerentes.length);
+        registro.setValue('manager', gerentes[indiceAleatorio]);
+        registro.update();
+    }
+}
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-27 12:56:37&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;8176a86cc30c26106f5a784ed401318d&lt;/sys_id&gt;&lt;sys_mod_count&gt;29&lt;/sys_mod_count&gt;&lt;sys_name&gt;Define o manager automaticamente&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Mock Skillup" source="x_1593770_mock_ski"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock Skillup"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_8176a86cc30c26106f5a784ed401318d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-27 16:25:44&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;before&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=8176a86cc30c26106f5a784ed401318d"/&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;8176a86cc30c26106f5a784ed401318d&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-27 12:56:37&lt;/sys_created_on&gt;&lt;sys_id&gt;9dd624acc30c26106f5a784ed40131b3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-27 12:56:37&lt;/sys_updated_on&gt;&lt;table&gt;sys_script&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2098401844</payload_hash>
+        <record_name>Define o manager automaticamente</record_name>
+        <reverted_from/>
+        <source>95cd95abc33712106f5a784ed40131bf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-27 16:25:44</sys_created_on>
+        <sys_id>fcb65968c30066106f5a784ed4013112</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195483a721b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-27 16:25:44</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>f0b659683e006610c139fc97c1317c12</update_guid>
+        <update_guid_history>f0b659683e006610c139fc97c1317c12:2098401844,513619685b006610d3d192ef1a86b755:-1829389305,73165168ff00661018492c31cd52c7f9:-154750270,66559d28710066104948d334625a4291:1864730741,b254dd644300661015017f80f4797c2a:2098401844,5e6eb4a8d78c2610e787085bcabfd4e2:-1829389305,511878a4a28c26106b158f3771b45234:47877254,b59770649f8c2610775cc64ab6063533:547099334,efe63824528c26100fb11cf95da1bff5:-1250175176,ecf53ce0438c26100da54a75da6f789c:-445262703,0a4438603b8c2610ae98124f9d96df0e:-1250175176,440438ecbf4c26109bf5e621d7879584:-99714623,df93b4ec1b4c26108e8b949de3ac28cf:-1250175176,0643b0acff4c26102a595ec53b8f5a2e:-99714623,e14238ac034c2610c72cd9c589a08370:-252370568,0fa138ac6a4c261064a3f21929bc4d88:1959075884,fe8138aca14c261092e2d2c6ba95fd67:345001653,762130acd74c26100447dadf84310541:-1789626563,cb60fce8364c2610ea623d0c5aab8265:837325241,50efe02c384c26102641408af9d285c5:1475390373,aebfe02c8a4c26103521d4bf424b15bc:2085834993,779fece8834c2610d56d8112cdb402ce:638891653,748f24a0fc4c2610a7a6fd91a2f67d12:-687812120,be6f6ce87a4c26101ab93270f4bc3144:1490318752,ac6e68a8d84c261081715c7d7b70548b:-972449740,36d9a464114c261070356bb2629f4b53:726770552,fea82ce0bc4c2610560d4d58b5981136:-258323940,3578e8e0e34c26102a0e0864dd1f4de5:491960297,c437e820ed4c26104f7e6a3594525c23:-1921350323,6dd628eca20c26105a4406b06630e361:-935382460</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-14 12:38:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>1ff5c5e88517469c86fa204a0be85429</sys_id>
+        <sys_metadata>8176a86cc30c26106f5a784ed401318d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Define o manager automaticamente</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent display_value="Equipe">2d2fd92fc33712106f5a784ed401314f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sys_script_8176a86cc30c26106f5a784ed401318d</sys_update_name>
+        <sys_update_version display_value="sys_script_8176a86cc30c26106f5a784ed401318d">fcb65968c30066106f5a784ed4013112</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-14 12:38:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

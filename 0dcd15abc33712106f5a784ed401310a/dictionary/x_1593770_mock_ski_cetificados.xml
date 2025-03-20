@@ -4,7 +4,7 @@
         <element label="Anexo" mandatory="true" max_length="40" name="anexo" type="file_attachment"/>
         <element label="Curso" mandatory="true" max_length="32" name="curso" reference="x_1593770_mock_ski_cursos" type="reference"/>
         <element label="Estagiario" mandatory="true" max_length="32" name="estagiario" reference="x_1593770_mock_ski_equipe" reference_qual="cargo=estagiario^EQ" reference_qual_condition="cargo=estagiario^EQ" type="reference"/>
-        <element label="Data de emissão" max_length="40" name="data_de_emissao" type="glide_date"/>
+        <element default="javascript:gs.GlideDate();" label="Data de emissão" max_length="40" name="data_de_emissao" type="glide_date"/>
         <index name="index">
             <element name="curso"/>
         </index>

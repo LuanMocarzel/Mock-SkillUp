@@ -8,13 +8,21 @@
                 <element inactive_on_update="false" label="Médio" sequence="1" value="2"/>
                 <element inactive_on_update="false" label="Baixa" sequence="0" value="1"/>
                 <element inactive_on_update="false" label="Alta" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Urgente" value="4"/>
             </choice>
         </element>
         <element label="Descricao" max_length="8000" name="descricao" type="html"/>
-        <element label="Tarefa" mandatory="true" max_length="32" name="tarefa" reference="task" type="reference"/>
+        <element label="Tarefa" mandatory="true" max_length="32" name="tarefa" reference="x_1593770_mock_ski_tarefa" type="reference"/>
         <element label="Passos para reproduzir" max_length="8000" name="passos_para_reproduzir" type="html"/>
         <element label="Assigned" max_length="32" name="assigned" reference="sys_user" type="reference"/>
-        <element label="Solicitante" max_length="32" name="solicitante" reference="sys_user" type="reference"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Finalizado" value="2"/>
+                <element inactive_on_update="false" label="Em andamento" value="1"/>
+                <element inactive_on_update="false" label="Cancelado" value="3"/>
+            </choice>
+        </element>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="90d1921e5f510100a9ad2572f2b477fe" label="Solicitante" max_length="32" name="solicitante" reference="sys_user" type="reference" use_dynamic_default="true"/>
         <index name="index">
             <element name="assigned"/>
         </index>
