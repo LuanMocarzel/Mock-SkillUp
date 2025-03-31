@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function ($scope) {
+	
+	// Inicializa as variáveis do escopo do widget
+	$scope.showForm = false;
+	$scope.newSkill = {};
+
+	// Alterna a exibição do formulário
+	$scope.toggleForm = function() {
+		$scope.showForm = !$scope.showForm;
+	};
+
+	// Adiciona uma nova skill
+	$scope.addSkill = function() {
+		$scope.data.newSkill = $scope.newSkill;
+
+		// Chama o Server Script para salvar a skill
+		$scope.server.update().then(function(response) {
+			if (response.success) {
+				$scope.data.records = response.records; // Atualiza a lista de skills
+				$scope.toggleForm(); // Fecha o formulário
+				$scope.newSkill = {}; // Reseta o formulário
+			}
+		});
+	};
+
+	// Remove uma skill
+	$scope.removeSkill = function(skillToRemove) {
+		if (confirm('Tem certeza que deseja remover esta skill?')) {
+			$scope.data.skillToRemove = skillToRemove;
+			
+			// Chama o Server Script para remover a skill
+			$scope.server.update().then(function(response) {
+				if (response.success) {
+					$scope.data.records = response.records; // Atualiza a lista de skills
+				}
+			});
+		}
+	};
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>mostra_skills</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>mostra_skills</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	data.sysUserID = $sp.getParameter("sys_id");
+
+	
+	// Buscar skills do usuário logado
+	data.records = [];
+	var gr = new GlideRecord('x_1593770_mock_ski_m2m_skill_equipes');
+	gr.addQuery("x_1593770_mock_ski_equipe", "=", data.sysUserID);
+	gr.query();
+
+	while (gr.next()) {
+		data.records.push({
+			sys_id: gr.getUniqueValue(), // Adicionado para identificar o registro
+			skill: gr.getDisplayValue('x_1593770_mock_ski_skill'),
+			dono: gr.getDisplayValue('x_1593770_mock_ski_equipe'),
+			nivel: gr.getValue('nivel'),
+		});
+	}
+
+	// Buscar todas as skills disponíveis
+	data.availableSkills = [];
+	var grSkills = new GlideRecord('x_1593770_mock_ski_skill');
+	grSkills.query();
+	while (grSkills.next()) {
+		data.availableSkills.push({
+			sys_id: grSkills.getUniqueValue(),
+			name: grSkills.getValue('skill')
+		});
+	}
+
+	// Adicionar skill ao usuário
+	if (input && input.newSkill) {
+		var newSkill = input.newSkill;
+
+		if (newSkill.skill && newSkill.nivel) {
+			var grNew = new GlideRecord('x_1593770_mock_ski_m2m_skill_equipes');
+			grNew.initialize();
+			grNew.x_1593770_mock_ski_equipe = data.sysUserID;
+			grNew.x_1593770_mock_ski_skill = newSkill.skill;
+			grNew.nivel = newSkill.nivel;
+			grNew.insert();
+		}
+
+		// Atualiza a lista de skills após adicionar
+		updateRecords();
+		data.success = true;
+	}
+	
+	// Remover skill do usuário
+	if (input && input.skillToRemove) {
+		var grDelete = new GlideRecord('x_1593770_mock_ski_m2m_skill_equipes');
+		if (grDelete.get(input.skillToRemove.sys_id)) {
+			grDelete.deleteRecord();
+		}
+		
+		// Atualiza a lista de skills após remover
+		updateRecords();
+		data.success = true;
+	}
+	
+	// Função para atualizar a lista de records
+	function updateRecords() {
+		data.records = [];
+		var grUpdated = new GlideRecord('x_1593770_mock_ski_m2m_skill_equipes');
+		grUpdated.addQuery("x_1593770_mock_ski_equipe", "=", data.sysUserID);
+		grUpdated.query();
+
+		while (grUpdated.next()) {
+			data.records.push({
+				sys_id: grUpdated.getUniqueValue(),
+				skill: grUpdated.getDisplayValue('x_1593770_mock_ski_skill'),
+				nivel: grUpdated.getValue('nivel'),
+			});
+		}
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-27 13:52:12</sys_created_on>
+        <sys_id>60100dedc32c26106f5a784ed4013116</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>mostra_skills</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sp_widget_60100dedc32c26106f5a784ed4013116</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 14:11:56</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-{{::options.color}} b">
+  <div class="panel-heading">
+    <h4 class="panel-title">Minhas Skills</h4>
+  </div>
+  <div class="panel-body">
+    <button class="btn btn-primary" ng-click="toggleForm()" ng-hide="showForm">Adicionar Skill</button>
+    
+    <div ng-show="showForm" class="m-t-sm">
+      <form>
+        <div class="form-group">
+          <label>Skill</label>
+          <select class="form-control" ng-model="newSkill.skill" ng-options="skill.sys_id as skill.name for skill in data.availableSkills">
+            <option value="">Selecione uma skill</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Nível</label>
+          <select class="form-control" ng-model="newSkill.nivel">
+            <option value="">Selecione um nível</option>
+            <option value="1">1 - Básico</option>
+            <option value="2">2 - Intermediário</option>
+            <option value="3">3 - Avançado</option>
+            <option value="4">4 - Especialista</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" ng-click="addSkill()">Adicionar</button>
+        <button class="btn btn-default" ng-click="toggleForm()">Cancelar</button>
+      </form>
+    </div>
+    
+    <div class="list-group m-t-sm">
+      <div class="list-group-item" ng-repeat="record in data.records">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="list-group-item-heading">{{record.skill}}</h4>
+            <p class="list-group-item-text">Nível: {{record.nivel}}</p>
+          </div>
+          <div class="col-md-6 text-right">
+            <button class="btn btn-danger btn-sm" ng-click="removeSkill(record)">
+              <span class="glyphicon glyphicon-trash"></span> Remover
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -16,7 +16,7 @@
         <column_label>Ativo</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>true</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -58,7 +58,7 @@
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sys_dictionary_x_1593770_mock_ski_aviso_ativo</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-24 16:11:51</sys_updated_on>
+        <sys_updated_on>2025-03-27 11:26:24</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

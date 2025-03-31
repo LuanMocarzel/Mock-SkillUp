@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>warning</color>
+        <css/>
+        <display_field>aviso</display_field>
+        <field_list/>
+        <filter table="x_1593770_mock_ski_aviso">ativo=true<item endquery="false" field="ativo" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </filter>
+        <glyph>exclamation</glyph>
+        <id/>
+        <maximum_entries>10</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">9c2a1238c3a862106f5a784ed401311a</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Lista simples">aa97d8d5c3a4e2106f5a784ed4013120</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-26 16:40:31</sys_created_on>
+        <sys_id>580d1855c3e4e2106f5a784ed4013170</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Avisos</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sp_instance_vlist_580d1855c3e4e2106f5a784ed4013170</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-26 16:44:21</sys_updated_on>
+        <table>x_1593770_mock_ski_aviso</table>
+        <title>Avisos</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"always_show": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"panel_body_height": {
+		"value": "",
+		"displayValue": ""
+	},
+	"image_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"secondary_fields": {
+		"value": "descricao,criado_por",
+		"displayValue": "descricao,criado_por"
+	},
+	"rounded_images": {
+		"value": "",
+		"displayValue": ""
+	},
+	"list_page": {
+		"value": "",
+		"displayValue": ""
+	},
+	"hide_footer": {
+		"value": "",
+		"displayValue": ""
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"disable_record_watcher": {
+		"value": "",
+		"displayValue": ""
+	},
+	"filter_acls": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance_vlist>
+    <sys_translated_text action="DELETE" query="documentkey=580d1855c3e4e2106f5a784ed4013170"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sp_instance_vlist_580d1855c3e4e2106f5a784ed4013170</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_vlist"&gt;&lt;sp_instance_vlist action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;warning&lt;/color&gt;&lt;css/&gt;&lt;display_field&gt;aviso&lt;/display_field&gt;&lt;field_list/&gt;&lt;filter table="x_1593770_mock_ski_aviso"&gt;ativo=true&lt;item endquery="false" field="ativo" goto="false" newquery="false" operator="=" or="false" value="true"/&gt;&lt;/filter&gt;&lt;glyph&gt;exclamation&lt;/glyph&gt;&lt;id/&gt;&lt;maximum_entries&gt;10&lt;/maximum_entries&gt;&lt;order&gt;1&lt;/order&gt;&lt;order_by/&gt;&lt;order_direction&gt;asc&lt;/order_direction&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;9c2a1238c3a862106f5a784ed401311a&lt;/sp_column&gt;&lt;sp_page/&gt;&lt;sp_widget display_value="Lista simples"&gt;aa97d8d5c3a4e2106f5a784ed4013120&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_vlist&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-03-26 16:40:31&lt;/sys_created_on&gt;&lt;sys_id&gt;580d1855c3e4e2106f5a784ed4013170&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Avisos&lt;/sys_name&gt;&lt;sys_package display_value="Mock Skillup" source="x_1593770_mock_ski"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Mock Skillup"&gt;0dcd15abc33712106f5a784ed401310a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_vlist_580d1855c3e4e2106f5a784ed4013170&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-26 16:44:21&lt;/sys_updated_on&gt;&lt;table&gt;x_1593770_mock_ski_aviso&lt;/table&gt;&lt;title&gt;Avisos&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"always_show": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"panel_body_height": {
+		"value": "",
+		"displayValue": ""
+	},
+	"image_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"secondary_fields": {
+		"value": "descricao,criado_por",
+		"displayValue": "descricao,criado_por"
+	},
+	"rounded_images": {
+		"value": "",
+		"displayValue": ""
+	},
+	"list_page": {
+		"value": "",
+		"displayValue": ""
+	},
+	"hide_footer": {
+		"value": "",
+		"displayValue": ""
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"disable_record_watcher": {
+		"value": "",
+		"displayValue": ""
+	},
+	"filter_acls": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_vlist&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=580d1855c3e4e2106f5a784ed4013170"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-490932415</payload_hash>
+        <record_name>Avisos</record_name>
+        <reverted_from/>
+        <source>c1870662c354e6106f5a784ed4013193</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-26 16:44:21</sys_created_on>
+        <sys_id>a8ed5c95c3e4e2106f5a784ed401310e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195d357320e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-26 16:44:21</sys_updated_on>
+        <type>Instance of Simple List</type>
+        <update_guid>20ed5c955ee4e21046c02526d689b20e</update_guid>
+        <update_guid_history>20ed5c955ee4e21046c02526d689b20e:-490932415,089dd8553ee4e210df9c4575877bc7ee:321357664,346d58553fe4e2101e1a8ac7649e06e5:-415939889,1c0d9855cee4e2107c7d557b18153864:340622784</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Avisos">ebd124d9c3e4e2106f5a784ed401310f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-26 17:01:46</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_vlist">sp_instance_vlist</sys_db_object>
+        <sys_id>73126535d2244ade8a3b7a043fe4d2c4</sys_id>
+        <sys_metadata>580d1855c3e4e2106f5a784ed4013170</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Avisos</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sp_instance_vlist_580d1855c3e4e2106f5a784ed4013170</sys_update_name>
+        <sys_update_version display_value="sp_instance_vlist_580d1855c3e4e2106f5a784ed4013170">a8ed5c95c3e4e2106f5a784ed401310e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-26 17:01:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

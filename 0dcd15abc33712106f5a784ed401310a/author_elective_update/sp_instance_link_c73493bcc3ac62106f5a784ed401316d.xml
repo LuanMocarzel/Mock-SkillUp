@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>info</color>
+        <css>h2 {&#13;
+  background: linear-gradient(&#13;
+    to bottom,&#13;
+    #ffa500, /* Laranja vibrante */&#13;
+    #ffffff  /* Branco */&#13;
+  );&#13;
+  -webkit-background-clip: text;&#13;
+  background-clip: text;&#13;
+  color: transparent;&#13;
+  transition: color 0.3s ease;&#13;
+}&#13;
+&#13;
+h2:hover {&#13;
+  color: #ff4500; /* Laranja claro no hover */&#13;
+}&#13;
+&#13;
+.text-info {&#13;
+  background: linear-gradient(&#13;
+    to bottom,&#13;
+    #ffa500,&#13;
+    #ffffff&#13;
+  );&#13;
+  -webkit-background-clip: text;&#13;
+  background-clip: text;&#13;
+  color: transparent;&#13;
+  transition: color 0.3s ease;&#13;
+}&#13;
+&#13;
+.text-info:hover {&#13;
+  color: #ff4500; /* Laranja claro no hover */&#13;
+}</css>
+        <glyph>plane</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item display_value="Solicitação de Ferias">92d8e19ac3dc66106f5a784ed4013198</sc_cat_item>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="4">033493bcc3ac62106f5a784ed401316b</sp_column>
+        <sp_page display_value="sc_cat_item">9f12251147132100ba13a5554ee490f4</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-25 16:44:06</sys_created_on>
+        <sys_id>c73493bcc3ac62106f5a784ed401316d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Peça suas férias</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sp_instance_link_c73493bcc3ac62106f5a784ed401316d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-25 16:44:06</sys_updated_on>
+        <title>Peça suas férias</title>
+        <type>sc_cat_item</type>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=c73493bcc3ac62106f5a784ed401316d"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sp_instance_link_c73493bcc3ac62106f5a784ed401316d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link"><sp_instance_link action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>info</color><css>h2 {&#13;
+  background: linear-gradient(&#13;
+    to bottom,&#13;
+    #ffa500, /* Laranja vibrante */&#13;
+    #ffffff  /* Branco */&#13;
+  );&#13;
+  -webkit-background-clip: text;&#13;
+  background-clip: text;&#13;
+  color: transparent;&#13;
+  transition: color 0.3s ease;&#13;
+}&#13;
+&#13;
+h2:hover {&#13;
+  color: #ff4500; /* Laranja claro no hover */&#13;
+}&#13;
+&#13;
+.text-info {&#13;
+  background: linear-gradient(&#13;
+    to bottom,&#13;
+    #ffa500,&#13;
+    #ffffff&#13;
+  );&#13;
+  -webkit-background-clip: text;&#13;
+  background-clip: text;&#13;
+  color: transparent;&#13;
+  transition: color 0.3s ease;&#13;
+}&#13;
+&#13;
+.text-info:hover {&#13;
+  color: #ff4500; /* Laranja claro no hover */&#13;
+}</css><glyph>plane</glyph><id/><kb_article/><kb_category/><kb_topic/><order>1</order><roles/><sc_cat_item display_value="Solicitação de Ferias">92d8e19ac3dc66106f5a784ed4013198</sc_cat_item><sc_category/><short_description/><size>md</size><sp_column display_value="4">033493bcc3ac62106f5a784ed401316b</sp_column><sp_page display_value="sc_cat_item">9f12251147132100ba13a5554ee490f4</sp_page><sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget><sys_class_name>sp_instance_link</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-25 16:44:06</sys_created_on><sys_id>c73493bcc3ac62106f5a784ed401316d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Peça suas férias</sys_name><sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package><sys_policy/><sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope><sys_update_name>sp_instance_link_c73493bcc3ac62106f5a784ed401316d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-25 16:44:06</sys_updated_on><title>Peça suas férias</title><type>sc_cat_item</type><url/><widget_parameters/></sp_instance_link><sys_translated_text action="delete_multiple" query="documentkey=c73493bcc3ac62106f5a784ed401316d"/></record_update>]]></payload>
+        <payload_hash>-997408350</payload_hash>
+        <record_name>Peça suas férias</record_name>
+        <reverted_from/>
+        <source>c1870662c354e6106f5a784ed4013193</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-25 16:44:06</sys_created_on>
+        <sys_id>0b3493bcc3ac62106f5a784ed401316f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195ce3099400000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-25 16:44:06</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>0f3493bc94ac6210e3e9fb1f79b7826e</update_guid>
+        <update_guid_history>0f3493bc94ac6210e3e9fb1f79b7826e:-997408350</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Peça suas férias">efb45fbcc3ac62106f5a784ed401314c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-25 16:46:19</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>7ca6cb3381ae4b6eac33d61184e7f524</sys_id>
+        <sys_metadata>c73493bcc3ac62106f5a784ed401316d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Peça suas férias</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sp_instance_link_c73493bcc3ac62106f5a784ed401316d</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_c73493bcc3ac62106f5a784ed401316d">0b3493bcc3ac62106f5a784ed401316f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-25 16:46:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

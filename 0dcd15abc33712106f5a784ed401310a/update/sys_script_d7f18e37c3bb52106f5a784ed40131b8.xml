@@ -38,7 +38,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d7f18e37c3bb52106f5a784ed40131b8</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Settar UserId</sys_name>
         <sys_overrides/>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
@@ -46,8 +46,8 @@
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sys_script_d7f18e37c3bb52106f5a784ed40131b8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-25 11:54:40</sys_updated_on>
-        <template>user_name=javascript: current.cpf^EQ</template>
+        <sys_updated_on>2025-03-28 13:31:15</sys_updated_on>
+        <template>user_name=javascript: current.name^EQ</template>
         <when>before</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=d7f18e37c3bb52106f5a784ed40131b8"/>

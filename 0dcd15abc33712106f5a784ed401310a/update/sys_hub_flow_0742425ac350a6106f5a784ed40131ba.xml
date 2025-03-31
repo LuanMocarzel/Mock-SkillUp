@@ -2,13 +2,12 @@
     <sys_hub_flow action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
-        <active>false</active>
+        <active>true</active>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=951654000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>26000</authored_on_release_version>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
-        <compiler_build/>
         <copied_from/>
         <copied_from_name/>
         <description/>
@@ -16,21 +15,20 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>flow_para_solicitao_de_frias</internal_name>
-        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Serviço Compartilhado Record","reference":"x_1593770_mock_ski_servico_compartilhado","reference_display":"Serviço Compartilhado","type":"reference","base_type":"reference","usedInstances":{"f1c7379f-b08d-4a0c-83f8-dd845827d477":["record"],"e2957ad0-ed1b-42e9-81de-c1b6a46f1ac6":["record"]},"attributes":{}},{"name":"Created_1.current.solicitante.manager","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante➛Manager","reference":"sys_user","reference_display":"Manager","type":"reference","base_type":"reference","parent_table_name":"x_1593770_mock_ski_equipe","column_name":"manager","usedInstances":{"f1c7379f-b08d-4a0c-83f8-dd845827d477":["approval_conditions"]}}]</label_cache>
-        <latest_snapshot/>
-        <master_snapshot/>
+        <label_cache>[{"name":"Created_1.current.description","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"description","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["short_description"]}},{"name":"Created_1.current.solicitante","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante","reference":"x_1593770_mock_ski_equipe","reference_display":"Equipe","type":"reference","base_type":"reference","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"solicitante","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["solicitante"]}},{"name":"Created_1.current.work_start","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual start","reference":"","reference_display":"Actual start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"work_start","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["comeco"]}},{"name":"Created_1.current.work_end","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual end","reference":"","reference_display":"Actual end","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"work_end","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["fim"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Serviço Compartilhado Record","reference":"x_1593770_mock_ski_servico_compartilhado","reference_display":"Serviço Compartilhado","type":"reference","base_type":"reference","usedInstances":{"f1c7379f-b08d-4a0c-83f8-dd845827d477":["record"],"e2957ad0-ed1b-42e9-81de-c1b6a46f1ac6":["record"]},"attributes":{}},{"name":"Created_1.current.solicitante.manager","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1593770_mock_ski_equipe","column_name":"manager","usedInstances":{"f1c7379f-b08d-4a0c-83f8-dd845827d477":["approval_conditions"]}}]</label_cache>
+        <master_snapshot>3c907eb5c3a422106f5a784ed40131eb</master_snapshot>
         <master_snapshot_digest/>
         <name>FLOW PARA SOLICITAÇÃO DE FÉRIAS</name>
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <remote_trigger_id/>
+        <remote_trigger_id>8190beb5c3a422106f5a784ed4013128</remote_trigger_id>
         <run_as>user</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>draft</status>
+        <status>published</status>
         <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -38,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0742425ac350a6106f5a784ed40131ba</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>FLOW PARA SOLICITAÇÃO DE FÉRIAS</sys_name>
         <sys_overrides/>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
@@ -46,12 +44,52 @@
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sys_hub_flow_0742425ac350a6106f5a784ed40131ba</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-18 11:32:29</sys_updated_on>
+        <sys_updated_on>2025-03-28 16:42:13</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=0742425ac350a6106f5a784ed40131ba"/>
     <sys_variable_value action="delete_multiple" query="document_key=0742425ac350a6106f5a784ed40131ba"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1593770_mock_ski_servico_compartilhado">item_de_cotalogo=92d8e19ac3dc66106f5a784ed4013198<item display_table="sc_cat_item" display_value="Solicitação de Ferias" endquery="false" field="item_de_cotalogo" goto="false" newquery="false" operator="=" or="false" value="92d8e19ac3dc66106f5a784ed4013198"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8190beb5c3a422106f5a784ed4013128</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:13</sys_updated_on>
+        <table>x_1593770_mock_ski_servico_compartilhado</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>0742425ac350a6106f5a784ed40131ba</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:13</sys_created_on>
+        <sys_id>cd90beb5c3a422106f5a784ed4013128</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:13</sys_updated_on>
+        <trigger display_value="">8190beb5c3a422106f5a784ed4013128</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=0742425ac350a6106f5a784ed40131ba^sys_idNOT INcd90beb5c3a422106f5a784ed4013128"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=0742425ac350a6106f5a784ed40131ba"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=0742425ac350a6106f5a784ed40131ba^sys_idNOT IN4b42425ac350a6106f5a784ed40131bc"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -256,10 +294,32 @@
         <trigger_outputs/>
         <trigger_type>record_create</trigger_type>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=0742425ac350a6106f5a784ed40131ba^sys_idNOT IN1ac9c226c354e6106f5a784ed40131c2,8913c6aac314e6106f5a784ed401318e"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=0742425ac350a6106f5a784ed40131ba^sys_idNOT IN1ac9c226c354e6106f5a784ed40131c2,87803eb5c3a422106f5a784ed40131ec,8913c6aac314e6106f5a784ed401318e"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FLOW PARA SOLICITAÇÃO DE FÉRIAS">0742425ac350a6106f5a784ed40131ba</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-18 11:32:29</sys_created_on>
+        <sys_id>1ac9c226c354e6106f5a784ed40131c2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:06</sys_updated_on>
+        <ui_id>e2957ad0-ed1b-42e9-81de-c1b6a46f1ac6</ui_id>
+        <values>H4sIAAAAAAAA/+1UwWobMRD9FaPzsux6bSfxrcQYemgCScklDUIrjW0R7WoraR27xt/TD+mPdbSrdRynTU0wlEJ102jmzXujx9xviBRkTAYgkvQiHfEszbJ+kvTPB2k+yvK0LzIGkJKIlKwAzDTAtRF4XzJV+8Bmc2mAORA0jXltDJRuu8V3IW2l2PoupGGEL6QS+E7G9w8RqZhBRAeGjDcHT25dAVUsB4WFE83rAkF7HyeIcSzbrvqmo3tI3/fAuwjoVPogPnk+aRIRWDkoBWC7GVMWIlKwUjCnzZqMnakxgKrFdanWu4yFLF2rtGArK78h/iDxeTNAaTxMYXelYULdcLTkcF05qcs24liuuslpVRflVSvBzxZmrFZub7a1RTyoPGVPomU4u13op5uu31SWjbrAVmnO1O7GnDMyrx1Y/x2goBlKwapKlnNaGb2UTTFSKeK5wks8U/oJe1o5L2PGPe8YB8TiKcYnTfiOGelFfEIYLN424unX2vdtZQTCtNHcCKbNR2Gq5UZW7gMCLyHQ3EbBrvnwLQPwi+f/3sN8tuyKpsOL7OwsoYXmj9Q+SmrBLCXXFOWhMZ1UCyb0axff+rQf33Xv8iDvfd7+7Nn1rlp2xyp7UfwbpcHdL2LB3MOTmfv8L5k7MPrH3P0nTyf9N5fa3k83NrZ7frYO9++XOkky0X/t2YPXdzoVCsR00GtRo6M5dwBTCUrYX4jorBoa0GVosNvFJ/NrOkqa838ln3AlP/wEIORNIkMIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Manda a solicitação pro doidão la">cddee235c3a422106f5a784ed40131d7</action_type>
+        <action_type_parent display_value="Manda a solicitação pro doidão la">1a4aca62c354e6106f5a784ed40131f5</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot/>
@@ -270,14 +330,14 @@
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-03-18 11:32:29</sys_created_on>
-        <sys_id>1ac9c226c354e6106f5a784ed40131c2</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2025-03-28 16:42:06</sys_created_on>
+        <sys_id>87803eb5c3a422106f5a784ed40131ec</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-18 11:32:29</sys_updated_on>
-        <ui_id>e2957ad0-ed1b-42e9-81de-c1b6a46f1ac6</ui_id>
-        <values>H4sIAAAAAAAA/+1UwWobMRD9FaPzsux6bSfxrcQYemgCScklDUIrjW0R7WoraR27xt/TD+mPdbSrdRynTU0wlEJ102jmzXujx9xviBRkTAYgkvQiHfEszbJ+kvTPB2k+yvK0LzIGkJKIlKwAzDTAtRF4XzJV+8Bmc2mAORA0jXltDJRuu8V3IW2l2PoupGGEL6QS+E7G9w8RqZhBRAeGjDcHT25dAVUsB4WFE83rAkF7HyeIcSzbrvqmo3tI3/fAuwjoVPogPnk+aRIRWDkoBWC7GVMWIlKwUjCnzZqMnakxgKrFdanWu4yFLF2rtGArK78h/iDxeTNAaTxMYXelYULdcLTkcF05qcs24liuuslpVRflVSvBzxZmrFZub7a1RTyoPGVPomU4u13op5uu31SWjbrAVmnO1O7GnDMyrx1Y/x2goBlKwapKlnNaGb2UTTFSKeK5wks8U/oJe1o5L2PGPe8YB8TiKcYnTfiOGelFfEIYLN424unX2vdtZQTCtNHcCKbNR2Gq5UZW7gMCLyHQ3EbBrvnwLQPwi+f/3sN8tuyKpsOL7OwsoYXmj9Q+SmrBLCXXFOWhMZ1UCyb0axff+rQf33Xv8iDvfd7+7Nn1rlp2xyp7UfwbpcHdL2LB3MOTmfv8L5k7MPrH3P0nTyf9N5fa3k83NrZ7frYO9++XOkky0X/t2YPXdzoVCsR00GtRo6M5dwBTCUrYX4jorBoa0GVosNvFJ/NrOkqa838ln3AlP/wEIORNIkMIAAA=</values>
+        <sys_updated_on>2025-03-28 16:42:11</sys_updated_on>
+        <ui_id>8a14d538-525a-4833-a817-2ddc3cdc2ee6</ui_id>
+        <values>H4sIAAAAAAAA/+2VyW7bMBCG30Vny6AWSnJuRdIABdoG6JJLEQgUOYqJUEsoKolr+Hn6IH2xDi1ZsQPHTlM3bYEeNQvnn+Wzv8wdKZwjJ5kIAD+gPGCh73skyimLkxBESLzAE5kzckpWAEY200qbVEDDtayNrEp03TDVWt98fqyBGRCpN+at1lCa8VrkYoGxQja1YrPzn0jhU6kEepyjLxcjp2YalRjQztH8gcvMakgVy0Dhyx+NluUlpj+1wSFxS4c7mrdFrWtVrtLCavNGDtwZKAVg+ZypBkZOwUrBTKVnzpHRLRqwdXFWqtkQMZWlwcccG3vXyK/4ckIIsZE5YJ8cOu/wmfbz7Mx8WkkOZ520pcWwTPU5vFJtUb7vOrGbgJy1yqw2gZa2wfegtqKtjF5TjgO5/bAqeCrLZX+9U1WcqeGLGZxC1hpo7HJa+enBbDrL24cbAgUFVkwLVtdoSWtd3chlFRRdjC8VfoxzVd3a0cvLcsy47XCMw2TjU7SfLM3nTEvb7jt8BpNtuc+lvG7hjb2AHCI/Z1niJtEE3FDEzE086rlZPPEmOaMRzcFZLEebXre2qW5I/TjSbqIY0C3/FUq4gb7zxWjFEd11ZuCtnVKlJJeGlQb2ELQWuY2gZwMyrHRgZL/4gZEN9Vtb6rnQa1V6NPxDoRH4m2DcpR6dBHFM0qLiV2lzJVO4bmUNjxDzeuV8nJtdT/45oNaHusnU+lJfBCtKKAk9JEoEhLshoRM3QYub+yL2IM5p5tNfxmqy89cbovsbxMaAV3uIuq00rtIwbQ4K1AkzA0tPULxKO0bJ379VW3roEVouKhXd6z1DwaEYCv/1P5eN6WzC0C/kRTggCWcTEsYuJSJ2Q+aBm9GAuyLmEYtDkkU8PwgHfvTYVZHg/oZyWTwFAiz+WxHYI3aVdrpUuyF9x+2H/2//77r9ICY+B8pdHobCDTllLvOYcHke+5z5OY9J9Ozbv/gBmob6L6QMAAA=</values>
     </sys_hub_action_instance_v2>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
@@ -355,6 +415,398 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_0742425ac350a6106f5a784ed40131ba"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_0742425ac350a6106f5a784ed40131ba"/>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_0742425ac350a6106f5a784ed40131ba"/>
-    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0742425ac350a6106f5a784ed40131ba"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>flow_para_solicitao_de_frias</internal_name>
+        <label_cache>[{"name":"Created_1.current.description","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"description","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["short_description"]}},{"name":"Created_1.current.solicitante","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante","reference":"x_1593770_mock_ski_equipe","reference_display":"Equipe","type":"reference","base_type":"reference","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"solicitante","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["solicitante"]}},{"name":"Created_1.current.work_start","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual start","reference":"","reference_display":"Actual start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"work_start","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["comeco"]}},{"name":"Created_1.current.work_end","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual end","reference":"","reference_display":"Actual end","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"work_end","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["fim"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Serviço Compartilhado Record","reference":"x_1593770_mock_ski_servico_compartilhado","reference_display":"Serviço Compartilhado","type":"reference","base_type":"reference","usedInstances":{"f1c7379f-b08d-4a0c-83f8-dd845827d477":["record"],"e2957ad0-ed1b-42e9-81de-c1b6a46f1ac6":["record"]},"attributes":{}},{"name":"Created_1.current.solicitante.manager","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1593770_mock_ski_equipe","column_name":"manager","usedInstances":{"f1c7379f-b08d-4a0c-83f8-dd845827d477":["approval_conditions"]}}]</label_cache>
+        <master>true</master>
+        <name>FLOW PARA SOLICITAÇÃO DE FÉRIAS</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="FLOW PARA SOLICITAÇÃO DE FÉRIAS">0742425ac350a6106f5a784ed40131ba</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3c907eb5c3a422106f5a784ed40131eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:12</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3c907eb5c3a422106f5a784ed40131eb^sys_idNOT INf0907eb5c3a422106f5a784ed40131ed"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3c907eb5c3a422106f5a784ed40131eb</id>
+        <name>FLOW PARA SOLICITAÇÃO DE FÉRIAS</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:12</sys_created_on>
+        <sys_id>f0907eb5c3a422106f5a784ed40131ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:12</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=f0907eb5c3a422106f5a784ed40131ed"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=3c907eb5c3a422106f5a784ed40131eb^sys_idNOT IN78907eb5c3a422106f5a784ed40131ee,f0907eb5c3a422106f5a784ed40131fc"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="FLOW PARA SOLICITAÇÃO DE FÉRIAS">3c907eb5c3a422106f5a784ed40131eb</model>
+        <model_id>3c907eb5c3a422106f5a784ed40131eb</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3c907eb5c3a422106f5a784ed40131eb</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:12</sys_created_on>
+        <sys_id>78907eb5c3a422106f5a784ed40131ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=78907eb5c3a422106f5a784ed40131ee"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="FLOW PARA SOLICITAÇÃO DE FÉRIAS">3c907eb5c3a422106f5a784ed40131eb</model>
+        <model_id>3c907eb5c3a422106f5a784ed40131eb</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3c907eb5c3a422106f5a784ed40131eb</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:13</sys_created_on>
+        <sys_id>f0907eb5c3a422106f5a784ed40131fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f0907eb5c3a422106f5a784ed40131fc"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=3c907eb5c3a422106f5a784ed40131eb^sys_idNOT INf490beb5c3a422106f5a784ed401310a"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="FLOW PARA SOLICITAÇÃO DE FÉRIAS">3c907eb5c3a422106f5a784ed40131eb</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:13</sys_created_on>
+        <sys_id>f490beb5c3a422106f5a784ed401310a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:13</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+Va227jNhD9FUFPLZACutiWlbetk0UDbDeFk20f0oCgeLGF0KIrUUrcRb6nH9If69C6WJblrGxnu3b2JYBJajjn6MwZisjdZ1PggAnz3LzFgWDmmRlGisURFreLOYNhpYdRhGd6boYjipWMF+a5ilN2ZsqYstg8t8/MDIuU3SySKwoPwdLlE8XjZjENv5+Q3fddz7PQTJIHlDyEKGFxFhKJiJzNcaxCMcVUwiM0TOYCL34vnrzRy/79Rxqjxjr4AXspncdnk0xDQWMWmed394BFJ0M4wb7DLOLaruNYljPs2cHADWyHuphZFoRoctBIXrVQsULOnhSLKIOtOBYJa2EpZpheR2JRrZgCyTlNM/yUhH9D9KGl13EGuROWz1U/UUFFPkymMiTseq5CGeUjeZ75pBTpLPqY569JZBynQpUkwkiaQDw21ynrJIqM+M1UPo7LDd+H0RJdMSkkwaL6hZWKwyBVLNGE81AA9SjnJpFpvMx+fDm6Hl+gP97djn65HKPx5c3t+Gp0e3lhPi9xob9SHTHPsMgF5XCeqzf/PmRCv8AonQWQzZmZkDicq3dEhRkr0nk+Wyk4TiOIgar3saHlnLmKwg9hAgTcAYaSnmVImOcfipDjNDIkvDn4Y5A0BnKUUaqCX83wpCCV/1aKcElKoZ8MxwjNULJI0DQNENA2mQBXYTRPFfL8oW8P8BZZemSNmmX5QOg707x/1m+LCUZUTXP8U1L/9WuYJGE0qZFUYdSS3IRYoQPtGiWDOdTktLDerxVgsaisVsva6lSb6skaqmgYUgfrsW3OA8Ydy9OobcsNuG15Vh9z6loWcWrWs7n91rxUQ811cC+ZUTHSxY16O7pRsqwj0aFqmqSWydcLuZMks3U9F3Ec/f4L0xsdYWoN83Z3cu9KiPnwxboeX4L2yqaPaYbhCVpi7GLqHcz7ccoiOA4opct5d/eOoEyWz+B8k5rJab0bmiAuY+OjjH66Wq0zbhgYCOR5UjZXt/QuoCFYbLwp1IFU02Yj00h/hvE1pLpIt7zz76i3NYorW2dxj97GesO+z13iAWboZrzHAmz3nD72vYHL/UZva2y/PbGj724dvSTb6kptfaVrrWatJV91mEan2qccGsIoQrtf6KvfLykHdfSy+rY29H2SPY1mz4V8BA3s0ecDTB4msUwjumH/ENMII2O1wvih4PbH03L6eqMDDbCX8a6vOB2Uh/SzlX7K4sTRYq9O5nI78FmPWfBx5kInC/q+HxDscO4NPObYjU622rg1m6PvXx0KJWurtG2fQ60izNq0u8M32rdP8CBfL6TYauv53PGb9EhGNFR5h21adDmVmHtWMKkFr9q3YjPgBBGpsJAT+WdqWS71HTpkto+JS8lgYFsD3sfesMdoz7Jd2x92KPDBAGPKtllawGsFXgfdkqpqwf9VCtz6RtfB+YX13jKcScrExSqcudZbNFuPOFIJUhJhSlGNx466zbFt3hGb3S8YAHF80C2DToUhyevd+EIaMGHAJkbIjQI1o0awMNSUgfUIMCHY0NC7n9hXZ/0ssom8OqS/ady5aW/cNcDwEtlpATv4GqFRQocewBj1cL/veu1XCX7zANaWwhcyPPpD2c7+kbXZ0Ysf0bvFbcZs/YyuyX9dAx1vDd4w6q92fGzJ4vjPkut1KXRT3ei8ExHC4a+YewV/KiJlKx/a3Zn40Cd929viTMP+VmcqNn8pMdUC+385S+oGVCinzaE+5VPH9W8Gr6XJ+/8A1t9Z6vIiAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=3c907eb5c3a422106f5a784ed40131eb^sys_idNOT IN3090beb5c3a422106f5a784ed401310a,7090beb5c3a422106f5a784ed4013109,bc90beb5c3a422106f5a784ed4013107"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="FLOW PARA SOLICITAÇÃO DE FÉRIAS">3c907eb5c3a422106f5a784ed40131eb</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:13</sys_created_on>
+        <sys_id>3090beb5c3a422106f5a784ed401310a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:13</sys_updated_on>
+        <ui_id>e2957ad0-ed1b-42e9-81de-c1b6a46f1ac6</ui_id>
+        <values>H4sIAAAAAAAA/+VV3W7aMBh9FeRrFCUEaOFuAiFN6lqpTNx0lWXsD7DqxJntUBjiefYge7F9SZyAoOqo1Bs07r4/+5wv5+CnHZGCDEkXRBgNoj6PozjuhGHnthvN+/E86oiYAUSkTVKWAHYa4NoIjNdM5UVitxsZYA4EjQKeGwOp2++xLqTNFNvOfBtm+EoqgXUyfHpuk4wZPNGBIcPdSelSSIrNQWHrY43pFKPbZkUsNM8TxEVlnbzzk2NfaX0dYwWHCjhR2CawcZAKQCALpiy0ScJSwZw2WzJ0JscEkhYPqdo2HSuZuopowjZW/sKbu2HRtwBkxv0SmpD6BVXpxZg5NsWTuctNsy8tOdhqJwIWLFdudJyrGh4yJ3VajTg2V/W0VnmS3lcbIc0BR98jtwgCsoJngbyitZiu9OtjDXIi03IlnqLSnKkmYs4ZOc9dAWdHQEG544RlmUyXNDN6LcthhJIES4VBsFD6Fe+0cpkGjBe4A9wqCyaYH5fpGTOyIPENj8HhfZvYrR0pZu2BCu6Q/swLJBUxT4GWWyhXQEslFMPcyMx9wavW4IHv21708957CuODg6COzjwIf0Oj3iC+uQlpovkLtS+SWjBryTVFwihvJ9WKCX3uhWnR9ue3bo1O+j7mkAvw1w75XuribT7eJGe5u+PZ1n1V8BbpfZpFbq/JIp7G1XvkX84IO+/+9x4pqTSDPXKFdfgW/MjDMBadc+WfVD+m9wtQ1XqfSFDCvgGzFjskCMsBrWCfCN4XWzNfbN6FT1N91A/L3xVp/795Hp7/AskHHvsVCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Manda a solicitação pro doidão la">cddee235c3a422106f5a784ed40131d7</action_type>
+        <action_type_parent display_value="Manda a solicitação pro doidão la">1a4aca62c354e6106f5a784ed40131f5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>cddee235c3a422106f5a784ed40131d7</compiled_snapshot>
+        <display_text/>
+        <flow display_value="FLOW PARA SOLICITAÇÃO DE FÉRIAS">3c907eb5c3a422106f5a784ed40131eb</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:13</sys_created_on>
+        <sys_id>7090beb5c3a422106f5a784ed4013109</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:13</sys_updated_on>
+        <ui_id>8a14d538-525a-4833-a817-2ddc3cdc2ee6</ui_id>
+        <values>H4sIAAAAAAAA/+2V207cMBCG3yXXm5Vz3uWugiJVaosELTcIRRN7zFp4k+A4wHbF8/RB+mKdnPZAOUoLF20vMzO2//lnPuVs6Sjh7DmTqUD0g4gHEPq+x2IZQTIJUYTMCzyROSMnhzlSZTUrjE0FVtyo0qoip9Q16LrJLZf7BsGiSL0xr43B3I43Ku/uqFaoqtSwOH3FET5TWlDG2Ts7HzklGFJi0Th7y3upl7aiIUNNpScP9PJEm3ZRtilrVH7Rf38erhqChRGNNG/k4K3FXCBpkqArHDlzyAXYwiycPWtqClDn4ijXi1XFTOWWLnOa2ttK/aDnJoyxplIitcmxy64+097OLiwPwAIpqbmtTV/KZ4XiWHUGCZRQa7u/GesKjrom2yMWMj2cLnQ9z792njirC4bpUaSuSASWTaeN9r4RSdbeHA8qD1XemtIndcFBr77AknVZbRs9S6dW3+653EX+8Bk1zunFdA5lSZG0NMW1al8h0fPxhaaPsdTFTTNEdZGPgTcdjmkCMD6k+EEbPgWjmna/0DV0uHnue66uavzU7JLE2JeQTdxJPEU3FAm4Ey/y3CyZelMJURxJdO5GTrWo9jVU1doomlB6VTdtdrb1BqWdx82RdrE+kKhr7L24Gw00Rk+tMHoba1poxZWF3OIzHG5UPsTh6zF7XuMKsy2RDyrv0Vqv+TZdxxvxHjB/V4AF/jZet6kXTYMkYem84JdpdalSvKpViY9w93FI7pi+p3S8A5byBMHw2aFC3Yy7ndqjsG7ObZvXzcm9C7IRi1joEa0iYNwNWTR1JxRxpS8SDxMZZX70BshOn/zrYLxefGoVefEMrTeFoZFbMHYnsL5A3QDrPsn79bN4QG/PaDumlGZyH9KDLtTzGeyKz/Cf/P1tubyNVO/zu9DEJhymLEzciInEDcFDN4sC7oqEx5CELIu5fCOa/PixfWXBejulmr8EJXp8ZyA9I2wA6bBVtiXzdQSF/wn6CwgKEuZzjLjLw1C4IY/ABQ+Ey2Xic/AlT1i8Q4LOfwO8pi5g0g0AAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="FLOW PARA SOLICITAÇÃO DE FÉRIAS">3c907eb5c3a422106f5a784ed40131eb</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:13</sys_created_on>
+        <sys_id>bc90beb5c3a422106f5a784ed4013107</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:13</sys_updated_on>
+        <ui_id>f1c7379f-b08d-4a0c-83f8-dd845827d477</ui_id>
+        <values>H4sIAAAAAAAA/+1X3VIaMRR+FSbXDF1AC3LnwDjTTqszYnsjTiZks5Iakm2SRSnD8/RB+mI9m2SXFRTBemP18vzmO4fvI5vLBeIx6qFON2mxo6NWNG5GUTuKuoc06rbZuN352GkTGqE6kmTKIFMzqnQM9oyILHcsFn3NiGUxbjZopjWTdrmEeMxNKsj8e0gDD51wEUMc9S6v6iglGjpaplFvsRbaFZIgYyYg9bzAtI7RztPcjhXNpoAL88L5JVQOQqT2aQARKMrhRHXE7iyTMQMcCRGG1dGUyJhYpeeoZ3UGDpg5PpNiXmZMuLR+zim5M/wXHNxu5XkJg8Fo2EFp4rAf704GxJIhdKY20+W6FKfM+JXELCGZsP2qzyecpZYr6UssGYuiWolsKk/9QlDZoPJzZAZAsDSfM0fux0qGE3V7XoA84dJtJIwoFCWitIi1mo8zm8NZICaYW/GUpCmX1zjVasZdMUCZNq4FGI1EqFs40/Br2SA0x92ArZLGCfgHzv2daJ4P8RXaQPGyjszc9AUxZjUK7BD/zHIkfrAwAnZb8CvI66jmqT2GU2YsYF7WA93HdCu36IpKvt2K7Xe4eXjU7nQiPFX0Bpsbjg3TM04VhjGB05aLCYnVpgCGedqf36rWX8vbTxY7QC9kcRGwr40SROFM7GL3NeHKaqc+ECTR3C6J4FlpwpPpAUl0o1ckiTDWq9fEU3KImts4FXdXHAIEMAMROOFMVG+BIrDJ+0pkP6bvgKpg+nE4o3YSYD0GN3DfmQ9x39Wvcb+1J/cfvw+6UfSa6P+WbgS6lWysveLUD5VpuUUBeMKNY8ajSqhk7KeIHUAWivjsUa4LYh38c/TQftfD/6+Hg8OtVKt8VpSspkrGPEdsKqrw/8zMHMv5t8sHngoNowSn3BJpWQNYRK6ZXi6vNsXz/Eb7aWyHwctnRyaYeWoRQWFlUIeiqsrK66voGJR28FIPkVcmtLfy3UW3ci05WnErzmBBQPjqu3uEPOwR6o2QVJKNUH2E8iyck8u5IQPAlQHnWyyWS+/JNAkNmhVzVR2TuXGZhk5YDNx03nse7MQQ/C/x7N9hJ4X+BhmrDfxSNtcUdFfi9HvhGzfcMCS4Th8uePWmO3yxm+7gXX7/Kj+AyXH5mIBrDP79XlCTV38BJ6PolwsTAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_3c907eb5c3a422106f5a784ed40131eb^sys_idNOT IN3890beb5c3a422106f5a784ed4013100,78907eb5c3a422106f5a784ed40131f9"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3c907eb5c3a422106f5a784ed40131eb</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:13</sys_created_on>
+        <sys_id>3890beb5c3a422106f5a784ed4013100</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3c907eb5c3a422106f5a784ed40131eb</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:12</sys_created_on>
+        <sys_id>78907eb5c3a422106f5a784ed40131f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3c907eb5c3a422106f5a784ed40131eb"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>0742425ac350a6106f5a784ed40131ba</sys_id>
+        <latest_snapshot>3c907eb5c3a422106f5a784ed40131eb</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0742425ac350a6106f5a784ed40131ba^sys_idNOT INc190beb5c3a422106f5a784ed401312a"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>0742425ac350a6106f5a784ed40131ba</plan_id>
+        <snapshot>3c907eb5c3a422106f5a784ed40131eb</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-28 16:42:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c190beb5c3a422106f5a784ed401312a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-28 16:42:13</sys_updated_on>
+        <trigger display_value="">8190beb5c3a422106f5a784ed4013128</trigger>
+    </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=0742425ac350a6106f5a784ed40131ba"/>
 </record_update>

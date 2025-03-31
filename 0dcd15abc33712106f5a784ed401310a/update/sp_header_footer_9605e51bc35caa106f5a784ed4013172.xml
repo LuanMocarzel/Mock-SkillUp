@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function controller ($scope, $element, $window) {
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>html, body {&#13;
+    height: 100%;&#13;
+    margin: 0;&#13;
+    display: flex;&#13;
+    flex-direction: column;&#13;
+}&#13;
+ &#13;
+/* Mantém o conteúdo principal flexível */&#13;
+.main-content {&#13;
+    flex: 1;&#13;
+    padding: 20px;&#13;
+}&#13;
+ &#13;
+/* Estilização do footer */&#13;
+.footer-container {&#13;
+    width: 100%;&#13;
+    background: linear-gradient(&#13;
+        to bottom,&#13;
+        #1a0033, /* Roxo muito escuro na parte superior */&#13;
+        #26004d, /* Roxo escuro intermediário */&#13;
+        #330066, /* Roxo escuro mais intenso */&#13;
+        #022c54  /* Preto na parte inferior */&#13;
+    );&#13;
+    color: white;&#13;
+    position: relative;&#13;
+    padding: 10px 0;&#13;
+}&#13;
+ &#13;
+/* Overlay escuro */&#13;
+&#13;
+.footer-container::before {&#13;
+    content: '';&#13;
+    position: absolute;&#13;
+    top: 0;&#13;
+    left: 0;&#13;
+    width: 100%;&#13;
+    height: 100%;&#13;
+    background: rgba(0, 0, 0, 0.5);&#13;
+    z-index: -1;&#13;
+}&#13;
+ &#13;
+/* Parte superior do footer */&#13;
+.footer-top {&#13;
+    display: flex;&#13;
+    justify-content: flex-start; /* Alinha logos à esquerda */&#13;
+    align-items: center;&#13;
+    padding: 0 20px;&#13;
+    max-width: 1200px;&#13;
+    margin: 0;&#13;
+}&#13;
+ &#13;
+/* Logos do footer */&#13;
+.footer-left {&#13;
+    display: flex;&#13;
+    align-items: center;&#13;
+    gap: 15px;&#13;
+}&#13;
+ &#13;
+.footer-logo {&#13;
+    height: 40px;&#13;
+    width: auto;&#13;
+    max-width: 110px;&#13;
+    transition: transform 0.3s ease;&#13;
+}&#13;
+ &#13;
+.footer-logo:hover {&#13;
+    transform: scale(1.05);&#13;
+}&#13;
+ &#13;
+/* Ícones sociais */&#13;
+.social-icons {&#13;
+    display: flex;&#13;
+    justify-content: center;&#13;
+    gap: 20px;&#13;
+    margin: 10px 0;&#13;
+}&#13;
+ &#13;
+.social-icons a {&#13;
+    color: white;&#13;
+    font-size: 22px;&#13;
+    opacity: 0.8;&#13;
+    transition: all 0.3s;&#13;
+    display: inline-flex;&#13;
+    align-items: center;&#13;
+    justify-content: center;&#13;
+    width: 36px;&#13;
+    height: 36px;&#13;
+}&#13;
+ &#13;
+.social-icons a:hover {&#13;
+    opacity: 1;&#13;
+    transform: translateY(-2px);&#13;
+}&#13;
+ &#13;
+/* Centraliza o texto do footer */&#13;
+.footer-bottom {&#13;
+    text-align: center;&#13;
+    padding: 10px 0;&#13;
+}&#13;
+ &#13;
+.footer-text {&#13;
+    display: block;&#13;
+    text-align: center;&#13;
+    font-size: 12px;&#13;
+    opacity: 0.9;&#13;
+    letter-spacing: 0.5px;&#13;
+}&#13;
+ &#13;
+/* Responsividade */&#13;
+@media (max-width: 768px) {&#13;
+    .footer-container {&#13;
+        padding: 12px 0;&#13;
+    }&#13;
+    .footer-top {&#13;
+        flex-direction: column;&#13;
+        gap: 10px;&#13;
+        align-items: center;&#13;
+    }&#13;
+    .footer-left {&#13;
+        justify-content: center;&#13;
+        width: 100%;&#13;
+    }&#13;
+    .social-icons {&#13;
+        gap: 15px;&#13;
+    }&#13;
+    .footer-logo {&#13;
+        height: 35px;&#13;
+        max-width: 95px;&#13;
+    }&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Pdc Footer</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <static>false</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-20 16:48:33</sys_created_on>
+        <sys_id>9605e51bc35caa106f5a784ed4013172</sys_id>
+        <sys_mod_count>76</sys_mod_count>
+        <sys_name>Pdc Footer</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sp_header_footer_9605e51bc35caa106f5a784ed4013172</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-26 17:33:50</sys_updated_on>
+        <template><![CDATA[<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Fixado</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <footer class="footer-container">
+      <div class="footer-content"> <!-- Novo container interno -->
+        <div class="footer-top">
+          <div class="footer-left">
+            <a href="https://goedx.com.br/" target="_blank">
+              <img src="https://goedx.com.br/assets/edxWhiteLogo.57f14615.svg" alt="EDX Logo" class="footer-logo">
+            </a>
+            <a href="https://goedx.com.br/" target="_blank">
+              <img src="https://goedx.com.br/assets/logoextremegroup.d5299486.svg" alt="Extreme Group Logo" class="footer-logo">
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="social-icons">
+            <a href="https://www.instagram.com/go_edx/" target="_blank">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/edx-digital-experience" target="_blank">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </div>
+          <p class="footer-text">EXTREME DIGITAL EXPERIENCE LTDA. © Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>]]></template>
+    </sp_header_footer>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>9605e51bc35caa106f5a784ed4013172</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-20 16:48:33</sys_created_on>
+        <sys_id>af45e997c35caa106f5a784ed40131ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-20 16:48:33</sys_updated_on>
+        <table>sp_header_footer</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

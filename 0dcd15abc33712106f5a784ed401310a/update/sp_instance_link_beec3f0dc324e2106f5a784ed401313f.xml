@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>info</color>
+        <css>h2 {&#13;
+  background: linear-gradient(&#13;
+    to bottom,&#13;
+    #ffa500, /* Laranja vibrante */&#13;
+    #ffffff  /* Branco */&#13;
+  );&#13;
+  -webkit-background-clip: text;&#13;
+  background-clip: text;&#13;
+  color: transparent;&#13;
+  transition: color 0.3s ease;&#13;
+}&#13;
+&#13;
+h2:hover {&#13;
+  color: #ff4500; /* Laranja claro no hover */&#13;
+}&#13;
+&#13;
+.text-info {&#13;
+  background: linear-gradient(&#13;
+    to bottom,&#13;
+    #ffa500,&#13;
+    #ffffff&#13;
+  );&#13;
+  -webkit-background-clip: text;&#13;
+  background-clip: text;&#13;
+  color: transparent;&#13;
+  transition: color 0.3s ease;&#13;
+}&#13;
+&#13;
+.text-info:hover {&#13;
+  color: #ff4500; /* Laranja claro no hover */&#13;
+}</css>
+        <glyph>bug</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category display_value="Técncica">939d3fcdc324e2106f5a784ed4013191</sc_category>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">8f3493bcc3ac62106f5a784ed4013176</sp_column>
+        <sp_page display_value="sc_category">07261a2147132100ba13a5554ee49092</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-26 14:20:20</sys_created_on>
+        <sys_id>beec3f0dc324e2106f5a784ed401313f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Achou um bug?</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sp_instance_link_beec3f0dc324e2106f5a784ed401313f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-26 14:50:13</sys_updated_on>
+        <title>Achou um bug?</title>
+        <type>sc_category</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="delete_multiple" query="documentkey=beec3f0dc324e2106f5a784ed401313f"/>
+</record_update>
