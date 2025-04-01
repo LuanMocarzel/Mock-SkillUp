@@ -15,8 +15,10 @@
   transition: color 0.3s ease;&#13;
 }&#13;
 &#13;
-h2:hover {&#13;
-  color: #ff4500; /* Laranja claro no hover */&#13;
+a:hover {&#13;
+  background-color: rgba(255, 69, 0, 0.5);&#13;
+  border-radius: 8px; /* Borda arredondada */&#13;
+  transition: all 0.3s ease; /* Suaviza a transição (opcional) */&#13;
 }&#13;
 &#13;
 .text-info {&#13;
@@ -30,10 +32,7 @@ h2:hover {&#13;
   color: transparent;&#13;
   transition: color 0.3s ease;&#13;
 }&#13;
-&#13;
-.text-info:hover {&#13;
-  color: #ff4500; /* Laranja claro no hover */&#13;
-}</css>
+</css>
         <glyph>file-text</glyph>
         <id/>
         <kb_article/>
@@ -52,14 +51,14 @@ h2:hover {&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-20 14:25:36</sys_created_on>
         <sys_id>d8848513c3d8aa106f5a784ed4013131</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Envie seu Certificado</sys_name>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sp_instance_link_d8848513c3d8aa106f5a784ed4013131</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-24 12:53:16</sys_updated_on>
+        <sys_updated_on>2025-03-31 14:39:46</sys_updated_on>
         <title>Envie seu Certificado</title>
         <type>sc_cat_item</type>
         <url/>

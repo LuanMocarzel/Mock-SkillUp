@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="df27f52bc3b712106f5a784ed401315a" extends="task" label="Serviço Compartilhado" max_length="40" name="x_1593770_mock_ski_servico_compartilhado" type="collection">
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Item de Cotalogo" max_length="32" name="item_de_cotalogo" reference="sc_cat_item" type="reference"/>
-        <element label="Solicitante" max_length="32" name="solicitante" reference="x_1593770_mock_ski_equipe" type="reference"/>
+        <element default="javascript: gs.getUserID();" label="Solicitante" max_length="32" name="solicitante" reference="x_1593770_mock_ski_equipe" type="reference"/>
         <element label="Arquivo" max_length="255" name="arquivo" type="file_attachment"/>
     </element>
 </database>

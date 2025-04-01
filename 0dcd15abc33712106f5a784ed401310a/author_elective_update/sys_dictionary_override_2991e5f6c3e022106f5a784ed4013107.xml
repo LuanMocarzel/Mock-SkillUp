@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override">
+    <sys_dictionary_override action="DELETE">
+        <attributes/>
+        <attributes_override>false</attributes_override>
+        <base_table>task</base_table>
+        <calculation/>
+        <calculation_override>false</calculation_override>
+        <default_value/>
+        <default_value_override>false</default_value_override>
+        <dependent/>
+        <dependent_override>false</dependent_override>
+        <display_override>false</display_override>
+        <element>assigned_to</element>
+        <mandatory>false</mandatory>
+        <mandatory_override>false</mandatory_override>
+        <name>x_1593770_mock_ski_projetos</name>
+        <read_only>false</read_only>
+        <read_only_override>false</read_only_override>
+        <reference_qual>user_nameSAMEASname^managerISNOTEMPTY</reference_qual>
+        <reference_qual_override>true</reference_qual_override>
+        <sys_class_name>sys_dictionary_override</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 13:49:25</sys_created_on>
+        <sys_id>2991e5f6c3e022106f5a784ed4013107</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>assigned_to</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sys_dictionary_override_2991e5f6c3e022106f5a784ed4013107</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 13:49:25</sys_updated_on>
+    </sys_dictionary_override>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sys_dictionary_override_2991e5f6c3e022106f5a784ed4013107</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override"><sys_dictionary_override action="INSERT_OR_UPDATE"><attributes/><attributes_override>false</attributes_override><base_table>task</base_table><calculation/><calculation_override>false</calculation_override><default_value/><default_value_override>false</default_value_override><dependent/><dependent_override>false</dependent_override><display_override>false</display_override><element>assigned_to</element><mandatory>false</mandatory><mandatory_override>false</mandatory_override><name>x_1593770_mock_ski_projetos</name><read_only>false</read_only><read_only_override>false</read_only_override><reference_qual>user_nameSAMEASname^managerISNOTEMPTY</reference_qual><reference_qual_override>true</reference_qual_override><sys_class_name>sys_dictionary_override</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-31 13:49:25</sys_created_on><sys_id>2991e5f6c3e022106f5a784ed4013107</sys_id><sys_mod_count>0</sys_mod_count><sys_name>assigned_to</sys_name><sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package><sys_policy/><sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope><sys_update_name>sys_dictionary_override_2991e5f6c3e022106f5a784ed4013107</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-31 13:49:25</sys_updated_on></sys_dictionary_override></record_update>]]></payload>
+        <payload_hash>1554624049</payload_hash>
+        <record_name>assigned_to</record_name>
+        <reverted_from/>
+        <source>c1870662c354e6106f5a784ed4013193</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 13:49:25</sys_created_on>
+        <sys_id>fac5693ec3e022106f5a784ed40131f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195ec76d2de0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 13:49:25</sys_updated_on>
+        <type>Dictionary Entry Override</type>
+        <update_guid>fec5693e51e0221027ee9f4d7e06d4f3</update_guid>
+        <update_guid_history>fec5693e51e0221027ee9f4d7e06d4f3:1554624049</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 13:50:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary_override">sys_dictionary_override</sys_db_object>
+        <sys_id>01653232a40d4c8e853d275489e23879</sys_id>
+        <sys_metadata>2991e5f6c3e022106f5a784ed4013107</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>assigned_to</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent display_value="Nome do Projeto">12b26163c37712106f5a784ed4013186</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sys_dictionary_override_2991e5f6c3e022106f5a784ed4013107</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_override_2991e5f6c3e022106f5a784ed4013107">fac5693ec3e022106f5a784ed40131f4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 13:50:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

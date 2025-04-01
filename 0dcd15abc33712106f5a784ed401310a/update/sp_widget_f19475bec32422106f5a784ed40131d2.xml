@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function recprodCard($scope, spUtil) {
+	var c = this;
+	
+
+ 
+  // Função para redirecionar ao Record Producer
+  $scope.c.redirectToRecordProducer = function() {
+    window.location.href = c.data.href;
+  };
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css> 
+.card-widget {
+  background-color: transparent; /* Fundo escuro para contraste */
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+  color: white; /* Texto branco */
+  max-width: 200px; /* Tamanho reduzido para um card */
+  margin: 0 auto; /* Centraliza */
+}
+ 
+.card-widget:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #0A0F3D; /* Cor mais clara no hover */
+}
+ 
+/* Estilo para o ícone (ajuste o tamanho conforme necessário) */
+.card-widget img {
+  width: 48px; /* Reduz o ícone para um tamanho adequado */
+  height: 48px;
+  margin-bottom: 12px;
+}
+ 
+/* Estilo para o texto "Report Bug" */
+.card-widget h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: white; /* Garante texto branco */
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>link_base</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>link-base</name>
+        <option_schema>[{"name":"link","section":"Presentation","label":"link URL","type":"string"},{"name":"titulo","section":"Presentation","label":"Titulo","type":"string"},{"name":"descricao","section":"Presentation","label":"Descrição","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	data.titulo = options.titulo;
+	data.descricao = options.descricao;
+	data.href = options.link;
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 14:54:03</sys_created_on>
+        <sys_id>f19475bec32422106f5a784ed40131d2</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>link-base</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sp_widget_f19475bec32422106f5a784ed40131d2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 17:14:23</sys_updated_on>
+        <template><![CDATA[<div class="card-widget" ng-click="c.redirectToRecordProducer()">
+
+    <img src="x_1523172_skill_up.bug_icon.png" alt="Report Bug"/>
+    <h3>{{data.titulo}}</h3>
+    <p>{{data.descricao}}</p>
+
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>f19475bec32422106f5a784ed40131d2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 16:42:01</sys_created_on>
+        <sys_id>534d4e3ec3a422106f5a784ed4013183</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 16:42:01</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
