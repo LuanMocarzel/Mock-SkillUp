@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_list_menu_config">
+    <sys_ux_list_menu_config action="DELETE">
+        <active>true</active>
+        <description/>
+        <name>seila</name>
+        <sys_class_name>sys_ux_list_menu_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 16:45:08</sys_created_on>
+        <sys_id>49979b4bc3ec62106f5a784ed4013133</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>seila</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sys_ux_list_menu_config_49979b4bc3ec62106f5a784ed4013133</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 16:45:08</sys_updated_on>
+    </sys_ux_list_menu_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</application>
+        <file_path/>
+        <instance_id>fb8401f11b5e7ddc65324089bd4bcb9d</instance_id>
+        <instance_name>dev204187</instance_name>
+        <name>sys_ux_list_menu_config_49979b4bc3ec62106f5a784ed4013133</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_list_menu_config"><sys_ux_list_menu_config action="INSERT_OR_UPDATE"><active>true</active><description/><name>seila</name><sys_class_name>sys_ux_list_menu_config</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-01 16:45:08</sys_created_on><sys_id>49979b4bc3ec62106f5a784ed4013133</sys_id><sys_mod_count>0</sys_mod_count><sys_name>seila</sys_name><sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package><sys_policy/><sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope><sys_update_name>sys_ux_list_menu_config_49979b4bc3ec62106f5a784ed4013133</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-01 16:45:08</sys_updated_on></sys_ux_list_menu_config></record_update>]]></payload>
+        <payload_hash>856322474</payload_hash>
+        <record_name>seila</record_name>
+        <reverted_from/>
+        <source>c1870662c354e6106f5a784ed4013193</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 16:45:08</sys_created_on>
+        <sys_id>b297df83c3ec62106f5a784ed4013188</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195f23e11320000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 16:45:08</sys_updated_on>
+        <type>UX List Menu Configuration</type>
+        <update_guid>b697df8329ec6210014097d0705adb87</update_guid>
+        <update_guid_history>b697df8329ec6210014097d0705adb87:856322474</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 16:50:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_list_menu_config">sys_ux_list_menu_config</sys_db_object>
+        <sys_id>41fe2fd63a41442d8b6df35413f6bba9</sys_id>
+        <sys_metadata>49979b4bc3ec62106f5a784ed4013133</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>seila</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_scope_delete display_value="">1b5f1afd28a94ea487f9a9c79907c5e4</sys_scope_delete>
+        <sys_update_name>sys_ux_list_menu_config_49979b4bc3ec62106f5a784ed4013133</sys_update_name>
+        <sys_update_version display_value="sys_ux_list_menu_config_49979b4bc3ec62106f5a784ed4013133">b297df83c3ec62106f5a784ed4013188</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 16:50:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

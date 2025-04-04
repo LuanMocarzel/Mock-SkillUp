@@ -3,7 +3,7 @@
         <category>other</category>
         <css>/* Background do body */
 body {
-  background: #0A0F3D url('https://img.goodfon.com/original/2308x1298/8/33/tekstura-texture-fioletovyy.jpg') no-repeat center center fixed !important;
+  background: url('https://wallpapers.com/images/hd/purple-and-black-background-o9kjj77c1qwdn7nh.jpg') no-repeat center fixed !important;
   background-size: cover !important;
   color: white;
   position: relative;
@@ -49,14 +49,14 @@ body {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-20 11:16:40</sys_created_on>
         <sys_id>4659549bc3d4aa106f5a784ed4013154</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>home_page</sys_name>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sp_page_4659549bc3d4aa106f5a784ed4013154</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-21 12:19:25</sys_updated_on>
+        <sys_updated_on>2025-04-02 17:10:15</sys_updated_on>
         <title>Home Page</title>
         <use_seo_script>false</use_seo_script>
     </sp_page>

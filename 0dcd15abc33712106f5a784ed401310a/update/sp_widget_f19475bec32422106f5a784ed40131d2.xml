@@ -4,9 +4,6 @@
         <client_script><![CDATA[function recprodCard($scope, spUtil) {
 	var c = this;
 	
-
- 
-  // Função para redirecionar ao Record Producer
   $scope.c.redirectToRecordProducer = function() {
     window.location.href = c.data.href;
   };
@@ -69,14 +66,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-31 14:54:03</sys_created_on>
         <sys_id>f19475bec32422106f5a784ed40131d2</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>link-base</sys_name>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sp_widget_f19475bec32422106f5a784ed40131d2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-31 17:14:23</sys_updated_on>
+        <sys_updated_on>2025-04-02 12:46:27</sys_updated_on>
         <template><![CDATA[<div class="card-widget" ng-click="c.redirectToRecordProducer()">
 
     <img src="x_1523172_skill_up.bug_icon.png" alt="Report Bug"/>

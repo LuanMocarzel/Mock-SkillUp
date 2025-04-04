@@ -12,13 +12,15 @@
   -webkit-background-clip: text;&#13;
   background-clip: text;&#13;
   color: transparent;&#13;
-  transition: color 0.3s ease;&#13;
+  transition: transform 0.3s ease;&#13;
 }&#13;
 &#13;
 a:hover {&#13;
   background-color: rgba(255, 69, 0, 0.5);&#13;
-  border-radius: 8px; /* Borda arredondada */&#13;
-  transition: all 0.3s ease; /* Suaviza a transição (opcional) */&#13;
+  border-radius: 8px; &#13;
+  transition: all 0.3s ease;&#13;
+  transform: scale(1.05);&#13;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);&#13;
 }&#13;
 &#13;
 .text-info {&#13;
@@ -31,8 +33,7 @@ a:hover {&#13;
   background-clip: text;&#13;
   color: transparent;&#13;
   transition: color 0.3s ease;&#13;
-}&#13;
-</css>
+}</css>
         <glyph>money</glyph>
         <id/>
         <kb_article/>
@@ -40,27 +41,27 @@ a:hover {&#13;
         <kb_topic/>
         <order>1</order>
         <roles/>
-        <sc_cat_item/>
+        <sc_cat_item display_value="Proposta Comercial">e91557fcc3ac62106f5a784ed4013134</sc_cat_item>
         <sc_category display_value="Comercial">7f3d77cdc324e2106f5a784ed4013169</sc_category>
         <short_description/>
         <size>md</size>
         <sp_column display_value="2">34c1313ec32422106f5a784ed4013135</sp_column>
-        <sp_page display_value="sc_category">07261a2147132100ba13a5554ee49092</sp_page>
+        <sp_page display_value="sc_cat_item">9f12251147132100ba13a5554ee490f4</sp_page>
         <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
         <sys_class_name>sp_instance_link</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-26 14:17:11</sys_created_on>
         <sys_id>f83cbbc9c324e2106f5a784ed4013112</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Propor Algo?</sys_name>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sp_instance_link_f83cbbc9c324e2106f5a784ed4013112</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-31 14:41:43</sys_updated_on>
+        <sys_updated_on>2025-04-01 14:08:22</sys_updated_on>
         <title>Propor Algo?</title>
-        <type>sc_category</type>
+        <type>sc_cat_item</type>
         <url/>
         <widget_parameters><![CDATA[{
 	"link_template": {

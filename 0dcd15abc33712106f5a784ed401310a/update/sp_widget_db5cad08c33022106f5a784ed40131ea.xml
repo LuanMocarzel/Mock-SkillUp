@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>dino</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>dino</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 11:30:31</sys_created_on>
+        <sys_id>db5cad08c33022106f5a784ed40131ea</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>dino</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sp_widget_db5cad08c33022106f5a784ed40131ea</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:09:52</sys_updated_on>
+        <template><![CDATA[<!-- Widget HTML (pode ser colado na parte template de um widget no Service Portal) -->
+<div id="dino-game" class="dino-container">
+  <img id="dino" class="dino" src="https://img.itch.zone/aW1hZ2UvNTA5MzIwLzI2NDIzNTMucG5n/794x1000/51%2FNhX.png" alt="Dino" />
+  <img id="cactus" class="cactus" src="https://cdn.creazilla.com/emojis/47172/cactus-emoji-clipart-md.png" alt="Cactus" />
+  <div id="score">Score: <span id="score-value">0</span></div>
+</div>
+
+<style>
+  .dino-container {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    background: url('https://ps.w.org/dinosaur-game/assets/banner-772x250.png?rev=2030297') center/cover no-repeat;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .dino {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+  }
+
+  .cactus {
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    animation: moveCactus 2s linear infinite;
+  }
+
+  .paused {
+    animation-play-state: paused !important;
+  }
+
+  @keyframes moveCactus {
+    from {
+      right: -20px;
+    }
+    to {
+      right: 620px;
+    }
+  }
+
+  .jump {
+    animation: jump 0.5s ease-out;
+  }
+
+  @keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 80px; }
+    100% { bottom: 0; }
+  }
+
+  #score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: monospace;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+</style>
+
+<script>
+  const dino = document.getElementById("dino");
+  const cactus = document.getElementById("cactus");
+  const scoreDisplay = document.getElementById("score-value");
+  let score = 0;
+  let isJumping = false;
+  let gameInterval;
+  let gameRunning = true;
+
+  function jump() {
+    if (!isJumping && gameRunning) {
+      isJumping = true;
+      dino.classList.add("jump");
+      setTimeout(() => {
+        dino.classList.remove("jump");
+        isJumping = false;
+      }, 500);
+    }
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (event.code === "Space") {
+      jump();
+    }
+  });
+
+  function checkCollision() {
+    const dinoRect = dino.getBoundingClientRect();
+    const cactusRect = cactus.getBoundingClientRect();
+
+    if (
+      dinoRect.right > cactusRect.left &&
+      dinoRect.left < cactusRect.right &&
+      dinoRect.bottom > cactusRect.top &&
+      dinoRect.top < cactusRect.bottom
+    ) {
+      gameRunning = false;
+      clearInterval(gameInterval);
+      cactus.classList.add("paused");
+
+      const retry = confirm("Game Over! Score: " + score + "\nDeseja jogar novamente?");
+      if (retry) {
+        score = 0;
+        scoreDisplay.textContent = score;
+        cactus.classList.remove("paused");
+        gameRunning = true;
+        gameInterval = setInterval(() => {
+          score++;
+          scoreDisplay.textContent = score;
+          checkCollision();
+        }, 100);
+      }
+    }
+  }
+
+  gameInterval = setInterval(() => {
+    if (!gameRunning) return;
+    score++;
+    scoreDisplay.textContent = score;
+    checkCollision();
+  }, 100);
+</script>
+]]></template>
+    </sp_widget>
+</record_update>

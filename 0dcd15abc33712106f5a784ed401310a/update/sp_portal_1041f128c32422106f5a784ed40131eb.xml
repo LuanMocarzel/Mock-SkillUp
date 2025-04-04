@@ -5,13 +5,13 @@
 $body-bg:#ffffff;
 $state-success-text:#1F8476;
 $sp-homepage-bg:#fff;
-$sp-navbar-divider-color:#6B0083;
+$sp-navbar-divider-color:#000000;
 $text-color:#717171;
 $sp-logo-margin-y:.7rem;
 $navbar-inverse-link-hover-color:#FFFFFF;
 $panel-bg:#fff;
 $brand-success:#1F8476;
-$navbar-inverse-bg:#1a0033;
+$navbar-inverse-bg:#110000;
 $brand-warning:#DFD139;
 $brand-danger:#C83C36;
 $sp-tagline-color:#717171;
@@ -35,7 +35,7 @@ $text-muted:#666666;
         <kb_knowledge_page/>
         <login_page/>
         <logo>c7104851c364e2106f5a784ed4013198</logo>
-        <notfound_page display_value="404">3c2c9063cb11020000f8d856634c9c1f</notfound_page>
+        <notfound_page display_value="meu_erro_404">14a1f104c37022106f5a784ed40131f3</notfound_page>
         <quick_start_config/>
         <rtl_enabled>false</rtl_enabled>
         <sc_catalog/>
@@ -49,14 +49,14 @@ $text-muted:#666666;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-24 14:57:07</sys_created_on>
         <sys_id>1041f128c32422106f5a784ed40131eb</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Portal do Cliente</sys_name>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sp_portal_1041f128c32422106f5a784ed40131eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-26 14:35:49</sys_updated_on>
+        <sys_updated_on>2025-04-04 12:14:05</sys_updated_on>
         <theme display_value="Theme Pdc">4393e957c35caa106f5a784ed401311e</theme>
         <title>Portal do Cliente</title>
         <ts_index_group/>

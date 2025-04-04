@@ -101,14 +101,14 @@ $color-gray-light: #E9ECEB;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-20 16:41:27</sys_created_on>
         <sys_id>4393e957c35caa106f5a784ed401311e</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>Theme Pdc</sys_name>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sp_theme_4393e957c35caa106f5a784ed401311e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-26 17:02:23</sys_updated_on>
+        <sys_updated_on>2025-04-01 13:34:08</sys_updated_on>
         <turn_off_scss_compilation>false</turn_off_scss_compilation>
     </sp_theme>
 </record_update>

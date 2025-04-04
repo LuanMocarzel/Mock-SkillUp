@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope, spModal) {
+        <client_script><![CDATA[/*jshint esversion: 11*/
+function($scope, $http, spModal, spUtil) {
 	$scope.showModal = false;
 	$scope.newAviso = { titulo: "", descricao: "", urgente: false };
+	$scope.avisos = [];
+
+	// Função para buscar avisos via API
+	$scope.getAvisos = function() {
+		$http.get('/api/now/table/x_1593770_mock_ski_aviso?sysparm_query=ativo=true&sysparm_display_value=true&sysparm_orderbyDESC=urgente')
+			.then(function(response) {
+			// Processa os registros retornados
+			$scope.avisos = response.data.result.map(aviso => ({
+				sys_id: aviso.sys_id,
+				titulo: aviso.aviso || aviso.aviso?.value || "Sem título",
+				projeto: aviso.projeto?.display_value || aviso.projeto?.value || "Sem projeto",
+				descricao: aviso.descricao || "Sem descrição",
+				criado: aviso.sys_created_by || "Desconhecido",
+				urgente: aviso.urgente == 'true' || aviso.urgente == true || aviso.urgente == '1' || aviso.urgente == 1
+			}));
+		}).catch(function(error) {
+			console.error("Erro ao carregar avisos:", error);
+			let errorMessage = error.data?.error?.message || JSON.stringify(error.data) || "Erro desconhecido";
+			spUtil.addErrorMessage("Erro ao carregar avisos: " + errorMessage);
+		});
+	};
+
 
 	// Alterna a exibição do modal
 	$scope.toggleModal = function() {
@@ -22,40 +45,49 @@
 			newAviso: $scope.newAviso
 		}).then(function(response) {
 			if (response.success) {
-				$scope.data.records = response.records;
+				$scope.getAvisos();
 				$scope.toggleModal();
-				$scope.newAviso = { titulo: "", descricao: "", urgente: false };
+				$scope.newAviso = { titulo: "", descricao: "",projeto: "", urgente: false };
 			} else {
 				alert("Erro ao adicionar aviso.");
 			}
 		});
 	};
 
-	// Remove um aviso
-	$scope.deleteItem = function(sys_id) {
-		spModal.confirm("Tem certeza que deseja excluir este aviso?").then(function(confirmed) {
-			if (confirmed) {
-				$scope.server.update({
-					avisoToRemove: { sys_id: sys_id }
-				}).then(function(response) {
-					if (response.success) {
-						$scope.data.records = response.records;
-					} else {
-						alert("Erro ao excluir aviso.");
-					}
-				});
+	// Função para desativar o aviso
+	$scope.deleteItem = function(avisoId) {
+		if (!avisoId) return;
+
+		$http({
+			method: 'DELETE',  // Alternativamente, pode ser DELETE, dependendo do backend
+			url: '/api/now/table/x_1593770_mock_ski_aviso/' + avisoId,
+			data: {
+				active: false  // Desativa o aviso
 			}
+		}).then(function(response) {
+			spUtil.addInfoMessage("Aviso desativado com sucesso!");
+			$scope.getAvisos();
+		}).catch(function(error) {
+			spUtil.addErrorMessage("Erro ao desativar o aviso: " + (error.data?.error || 'Erro desconhecido'));
 		});
 	};
+
+	// Carregar avisos ao abrir o widget
+	$scope.getAvisos();
 }
 ]]></client_script>
         <controller_as>c</controller_as>
         <css>p {
   font-weight: normal;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
 }
 
 .panel-body {
   background-color: rgba(255, 255, 255, 0.82) !important;
+  max-height: none; /* Remove qualquer limitação de altura */
+  overflow: visible; /* Garante que o conteúdo seja exibido */
 }
 
 .panel {
@@ -67,6 +99,9 @@
   border-radius: 5px;
   margin-bottom: 5px;
   padding: 10px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
 }
 
 .aviso-normal {
@@ -80,22 +115,28 @@
   font-weight: bold;
 }
 
+.aviso .d-flex {
+  flex-wrap: wrap; /* Permite que os elementos quebrem linha caso necessário */
+}
+
+.aviso .btn {
+  flex-shrink: 0; /* Impede que os botões encolham e forcem o texto a ser cortado */
+}
+
 .modal {
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.5);
   color: #000000;
-
 }
 
 .modal-dialog {
   background: white;
   border-radius: 10px;
   padding: 20px;
-  width:600px;
-}
-</css>
+  width: 600px;
+}</css>
         <data_table>sp_instance_vlist</data_table>
         <demo_data/>
         <description/>
@@ -110,72 +151,34 @@
         <public>true</public>
         <roles/>
         <script><![CDATA[(function() {
-    data.records = [];
-    data.canAdd = gs.hasRole('x_1593770_mock_ski.gestor') || gs.hasRole('x_1593770_mock_ski.monitor'); 
+	data.records = [];
+	data.sysUserID = $sp.getParameter("sys_id");
+	data.canAdd = gs.hasRole('x_1593770_mock_ski.gestor') || gs.hasRole('x_1593770_mock_ski.monitor'); 
 
-    var grAvisos = new GlideRecord('x_1593770_mock_ski_aviso'); 
-    grAvisos.orderByDesc('urgente'); 
-    grAvisos.query();
+	if (input && input.newAviso) {
+		var newAviso = input.newAviso;
 
-    while (grAvisos.next()) {
-        data.records.push({
-            sys_id: grAvisos.getValue('sys_id'),
-            titulo: grAvisos.getDisplayValue('aviso'),
-            descricao: grAvisos.getValue('descricao'),
-						criado: grAvisos.getValue('sys_created_by'),
-            urgente: grAvisos.getValue('urgente') == '1'
-        });
-    }
+		if (newAviso.titulo && newAviso.descricao) {
+			var grNew = new GlideRecord('x_1593770_mock_ski_aviso'); // Substitua pelo nome correto da tabela
+			grNew.initialize();
+			grNew.aviso = newAviso.titulo;
+			grNew.descricao = newAviso.descricao;
+			grNew.projeto = newAviso.projeto;
+			grNew.urgente = newAviso.urgente ? '1' : '0';
+			grNew.insert();
+		}
+		data.success = true;
+	}
 
-    if (input && input.newAviso) {
-        var newAviso = input.newAviso;
-
-        if (newAviso.titulo && newAviso.descricao) {
-            var grNew = new GlideRecord('x_1593770_mock_ski_aviso'); // Substitua pelo nome correto da tabela
-            grNew.initialize();
-            grNew.aviso = newAviso.titulo;
-            grNew.descricao = newAviso.descricao;
-            grNew.urgente = newAviso.urgente ? '1' : '0';
-            grNew.insert();
-        }
-
-        // Atualiza a lista de avisos após adicionar
-        updateRecords();
-        data.success = true;
-    }
-
-    // Remover aviso
-    if (input && input.avisoToRemove) {
-        var grDelete = new GlideRecord('x_1593770_mock_ski_aviso');
-        if (grDelete.get(input.avisoToRemove.sys_id)) {
-            grDelete.deleteRecord();
-        }
-        
-        // Atualiza a lista de avisos após remover
-        updateRecords();
-        data.success = true;
-    }
-
-    // Função para atualizar a lista de avisos
-    function updateRecords() {
-        data.records = [];
-        var grUpdated = new GlideRecord('x_1593770_mock_ski_aviso');
-        grUpdated.orderByDesc('sys_created_on');
-        grUpdated.query();
-
-        while (grUpdated.next()) {
-            data.records.push({
-                sys_id: grUpdated.getUniqueValue(),
-                titulo: grUpdated.getValue('aviso'),
-                descricao: grUpdated.getValue('descricao'),
-                criado: grUpdated.getValue('sys_created_by'),
-                urgente: grUpdated.getValue('urgente') === '1'
-            });
-        }
-    }
-
-    // Carregar avisos na inicialização
-    updateRecords();
+	data.projeto = [];
+	var grProjeto = new GlideRecord('x_1593770_mock_ski_projetos');
+	grProjeto.query();
+	while (grProjeto.next()) {
+		data.projeto.push({
+			sys_id: grProjeto.getUniqueValue(),
+			name: grProjeto.getValue('nome_do_projeto')
+		});
+	}
 })();
 ]]></script>
         <servicenow>false</servicenow>
@@ -183,14 +186,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-27 16:32:57</sys_created_on>
         <sys_id>53d46d2dc3ec26106f5a784ed40131c7</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>96</sys_mod_count>
         <sys_name>Avisos</sys_name>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sp_widget_53d46d2dc3ec26106f5a784ed40131c7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-31 14:49:47</sys_updated_on>
+        <sys_updated_on>2025-04-03 16:51:10</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default">
   <div class="panel-heading d-flex justify-content-between align-items-center">
     <h3 class="panel-title">Lista de Avisos</h3>
@@ -204,58 +207,78 @@
   <div class="panel-body">
     <ul class="list-group">
       <li class="list-group-item aviso"
-          ng-repeat="aviso in data.records | orderBy: '-urgente' track by aviso.sys_id"
+          ng-repeat="aviso in avisos | orderBy: '-urgente' track by aviso.sys_id"
           ng-class="{'aviso-urgente': aviso.urgente, 'aviso-normal': !aviso.urgente}">
         <div class="d-flex justify-content-between align-items-center">
           <div>
-            <h4 class="m-0">{{ aviso.titulo }}</h4>
+            <h4 class="m-0">
+              <span ng-if="aviso.urgente" class="text-warning">
+                <fa name="exclamation-triangle"></fa>
+              </span>
+              {{ aviso.titulo }}
+            </h4>
             <p class="m-0">{{ aviso.descricao }}</p>
             <p class="m-0"> ● {{ aviso.criado }}</p>
           </div>
-          <!--<button class="btn btn-danger btn-xs" ng-click="deleteItem(aviso.sys_id)" ng-if="data.canAdd">
+          <button class="btn btn-danger btn-xs" ng-click="deleteItem(aviso.sys_id)" ng-if="data.canAdd">
             <fa name="times"></fa> Remover
-          </button>-->
+          </button>
         </div>
       </li>
     </ul>
-    <div ng-if="data.records.length === 0" class="text-center text-muted">
+    <div ng-if="avisos.length === 0" class="text-center text-muted">
       Nenhum aviso encontrado.
     </div>
   </div>
-</div>
 
-<!-- Modal para Adicionar Aviso -->
-<div class="modal fade in" ng-if="showModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" ng-click="toggleModal()">&times;</button>
-        <h4 class="modal-title">Adicionar Aviso</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="titulo">Título</label>
-            <input type="text" class="form-control" ng-model="newAviso.titulo" required>
-          </div>
-          <div class="form-group">
-            <label for="descricao">Descrição</label>
-            <textarea class="form-control" ng-model="newAviso.descricao" required></textarea>
-          </div>
-          <div class="form-group">
-            <label>
-              <input type="checkbox" ng-model="newAviso.urgente"> Aviso Urgente
-            </label>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-default" ng-click="toggleModal()">Cancelar</button>
-        <button class="btn btn-primary" ng-click="addAviso()">Adicionar</button>
+  <!-- Modal para Adicionar Aviso -->
+  <div class="modal fade in" ng-if="showModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" ng-click="toggleModal()">&times;</button>
+          <h4 class="modal-title">Adicionar Aviso</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="titulo">Título</label>
+              <input type="text" class="form-control" ng-model="newAviso.titulo" required>
+            </div>
+            <div class="form-group">
+              <label for="descricao">Descrição</label>
+              <textarea class="form-control" ng-model="newAviso.descricao" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="projeto">Projeto</label>
+              <select class="form-control" ng-model="newAviso.projeto" ng-options="projeto.sys_id as projeto.name for projeto in data.projeto">
+                <option value="">Selecione uma skill</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="checkbox" ng-model="newAviso.urgente"> Aviso Urgente
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" ng-click="toggleModal()">Cancelar</button>
+          <button class="btn btn-primary" ng-click="addAviso()">Adicionar</button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-]]></template>
+  </div>]]></template>
     </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>53d46d2dc3ec26106f5a784ed40131c7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-03 16:18:16</sys_created_on>
+        <sys_id>aca46937c32066106f5a784ed40131b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-03 16:18:16</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>

@@ -5,13 +5,13 @@
 $body-bg:#ffffff;
 $state-success-text:#1F8476;
 $sp-homepage-bg:#fff;
-$sp-navbar-divider-color:#6B0083;
+$sp-navbar-divider-color:#000000;
 $text-color:#717171;
 $sp-logo-margin-y:.7rem;
 $navbar-inverse-link-hover-color:#FFFFFF;
 $panel-bg:#fff;
 $brand-success:#1F8476;
-$navbar-inverse-bg:#1a0033;
+$navbar-inverse-bg:#110000;
 $brand-warning:#DFD139;
 $brand-danger:#C83C36;
 $sp-tagline-color:#717171;
@@ -35,7 +35,7 @@ $text-muted:#666666;
         <kb_knowledge_page/>
         <login_page/>
         <logo>afbde167c3502e106f5a784ed401316b</logo>
-        <notfound_page display_value="404">3c2c9063cb11020000f8d856634c9c1f</notfound_page>
+        <notfound_page display_value="meu_erro_404">14a1f104c37022106f5a784ed40131f3</notfound_page>
         <quick_start_config/>
         <rtl_enabled>false</rtl_enabled>
         <sc_catalog/>
@@ -49,14 +49,14 @@ $text-muted:#666666;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-19 16:47:24</sys_created_on>
         <sys_id>5cfadccbc3146a106f5a784ed40131e2</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>42</sys_mod_count>
         <sys_name>Portal do Colaborador</sys_name>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sp_portal_5cfadccbc3146a106f5a784ed40131e2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-21 13:00:24</sys_updated_on>
+        <sys_updated_on>2025-04-04 12:13:52</sys_updated_on>
         <theme display_value="Theme Pdc">4393e957c35caa106f5a784ed401311e</theme>
         <title>Portal do Colaborador</title>
         <ts_index_group/>
