@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>tetris</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>tetris</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 17:21:22</sys_created_on>
+        <sys_id>e2ac3280c3f422106f5a784ed40131c5</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>tetris</sys_name>
+        <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
+        <sys_update_name>sp_widget_e2ac3280c3f422106f5a784ed40131c5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 11:40:28</sys_updated_on>
+        <template><![CDATA[<!-- Tetris Widget (ServiceNow Service Portal compatible) -->
+<div class="tetris-widget">
+  <canvas id="tetris" width="240" height="400"></canvas>
+  <div id="ponto" style="color: #0ff; font-family: monospace; margin-top: 10px; position: absolute; top: 10px; left: 10px; font-size: 18px; z-index: 1;">Score: 0</div>
+</div>
+
+<style>
+  .tetris-widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #000;
+    position: relative;
+  }
+
+  canvas {
+    background: #111;
+    box-shadow: 0 0 10px #0ff;
+  }
+</style>
+
+<script>
+  const canvas = document.getElementById('tetris');
+  const context = canvas.getContext('2d');
+  context.scale(20, 20);
+
+  function padTo4x4(shape) {
+    const matrix = Array.from({ length: 4 }, () => [0, 0, 0, 0]);
+    for (let y = 0; y < shape.length; y++) {
+      for (let x = 0; x < shape[y].length; x++) {
+        matrix[y][x] = shape[y][x];
+      }
+    }
+    return matrix;
+  }
+
+  const pieces = {
+    T: { shape: padTo4x4([[0, 1, 0], [1, 1, 1]]), color: '#ff0' },
+    O: { shape: padTo4x4([[1, 1], [1, 1]]), color: '#f80' },
+    L: { shape: padTo4x4([[0, 0, 1], [1, 1, 1]]), color: '#00f' },
+    J: { shape: padTo4x4([[1, 0, 0], [1, 1, 1]]), color: '#0f0' },
+    I: { shape: padTo4x4([[1], [1], [1], [1]]), color: '#0ff' },
+    S: { shape: padTo4x4([[0, 1, 1], [1, 1, 0]]), color: '#f0f' },
+    Z: { shape: padTo4x4([[1, 1, 0], [0, 1, 1]]), color: '#f00' }
+  };
+
+  function createMatrix(w, h) {
+    const matrix = [];
+    while (h--) matrix.push(new Array(w).fill(0));
+    return matrix;
+  }
+
+  function collide(matrix, player) {
+    const [m, o] = [player.matrix, player.pos];
+    for (let y = 0; y < m.length; ++y) {
+      for (let x = 0; x < m[y].length; ++x) {
+        if (m[y][x] && (matrix[y + o.y] && matrix[y + o.y][x + o.x]) !== 0) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  function merge(matrix, player) {
+    player.matrix.forEach((row, y) => {
+      row.forEach((value, x) => {
+        if (value) matrix[y + player.pos.y][x + player.pos.x] = player.color;
+      });
+    });
+  }
+
+  function rotate(matrix, dir) {
+    for (let y = 0; y < matrix.length; ++y) {
+      for (let x = 0; x < y; ++x) {
+        [matrix[x][y], matrix[y][x]] = [matrix[y][x], matrix[x][y]];
+      }
+    }
+    if (dir > 0) matrix.forEach(row => row.reverse());
+    else matrix.reverse();
+  }
+
+  function playerDrop() {
+    player.pos.y++;
+    if (collide(arena, player)) {
+      player.pos.y--;
+      merge(arena, player);
+      arenaSweep();
+      playerReset();
+    }
+    dropCounter = 0;
+  }
+
+  function playerMove(dir) {
+    player.pos.x += dir;
+    if (collide(arena, player)) player.pos.x -= dir;
+  }
+
+  function playerRotate(dir) {
+    const pos = player.pos.x;
+    let offset = 1;
+    rotate(player.matrix, dir);
+    while (collide(arena, player)) {
+      player.pos.x += offset;
+      offset = -(offset + (offset > 0 ? 1 : -1));
+      if (offset > player.matrix[0].length) {
+        rotate(player.matrix, -dir);
+        player.pos.x = pos;
+        return;
+      }
+    }
+  }
+
+  let pieceBag = [];
+  function getNextPiece() {
+    if (pieceBag.length === 0) {
+      pieceBag = Object.keys(pieces).sort(() => Math.random() - 0.5);
+    }
+    const type = pieceBag.pop();
+    const piece = pieces[type];
+    return {
+      matrix: piece.shape.map(row => [...row]),
+      color: piece.color
+    };
+  }
+
+  function playerReset() {
+    const next = getNextPiece();
+    player.matrix = next.matrix;
+    player.color = next.color;
+    player.pos.y = 0;
+    player.pos.x = Math.floor((arena[0].length - player.matrix[0].length) / 2);
+    if (collide(arena, player)) {
+      const restart = confirm("Game Over! Deseja jogar novamente?");
+      if (restart) {
+        arena.forEach(row => row.fill(0));
+        score = 0;
+        updateScore();
+      } else {
+        cancelAnimationFrame(animationFrameId);
+      }
+    }
+  }
+
+  function arenaSweep() {
+    let linesCleared = 0;
+    outer: for (let y = arena.length - 1; y >= 0; --y) {
+      for (let x = 0; x < arena[y].length; ++x) {
+        if (!arena[y][x]) continue outer;
+      }
+      const row = arena.splice(y, 1)[0].fill(0);
+      arena.unshift(row);
+      ++y;
+      linesCleared++;
+    }
+    if (linesCleared > 0) {
+      score += linesCleared * 100;
+      updateScore();
+    }
+  }
+
+  function drawMatrix(matrix, offset, color) {
+    matrix.forEach((row, y) => {
+      row.forEach((value, x) => {
+        if (value) {
+          context.fillStyle = color;
+          context.fillRect(x + offset.x, y + offset.y, 1, 1);
+        }
+      });
+    });
+  }
+
+  function draw() {
+    context.fillStyle = '#000';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    arena.forEach((row, y) => {
+      row.forEach((value, x) => {
+        if (value) {
+          context.fillStyle = value;
+          context.fillRect(x, y, 1, 1);
+        }
+      });
+    });
+    drawMatrix(player.matrix, player.pos, player.color);
+  }
+
+  function update(time = 0) {
+    const deltaTime = time - lastTime;
+    lastTime = time;
+    dropCounter += deltaTime;
+    if (dropCounter > dropInterval) playerDrop();
+    draw();
+    animationFrameId = requestAnimationFrame(update);
+  }
+
+  function updateScore() {
+    document.getElementById('ponto').textContent = 'Score: ' + score;
+  }
+
+  const arena = createMatrix(12, 20);
+  const player = {
+    pos: {x: 0, y: 0},
+    matrix: null,
+    color: '#fff'
+  };
+
+  let dropCounter = 0;
+  let dropInterval = 1000;
+  let lastTime = 0;
+  let score = 0;
+  let animationFrameId;
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') playerMove(-1);
+    else if (event.key === 'ArrowRight') playerMove(1);
+    else if (event.key === 'ArrowDown') playerDrop();
+    else if (event.code === 'Space') {
+      event.preventDefault();
+      playerRotate(1);
+    }
+  });
+
+  updateScore();
+  playerReset();
+  update();
+</script>
+]]></template>
+    </sp_widget>
+</record_update>
