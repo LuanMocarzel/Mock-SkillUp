@@ -6,7 +6,7 @@
         <caller_access/>
         <client_scripts_access>false</client_scripts_access>
         <configuration_access>false</configuration_access>
-        <create_access>false</create_access>
+        <create_access>true</create_access>
         <create_access_controls>true</create_access_controls>
         <delete_access>false</delete_access>
         <is_extendable>false</is_extendable>
@@ -22,15 +22,15 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-24 16:14:42</sys_created_on>
         <sys_id>df27f52bc3b712106f5a784ed401315a</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Serviço Compartilhado</sys_name>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
         <sys_policy/>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sys_db_object_df27f52bc3b712106f5a784ed401315a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-17 16:54:21</sys_updated_on>
-        <update_access>false</update_access>
+        <sys_updated_on>2025-04-07 13:59:27</sys_updated_on>
+        <update_access>true</update_access>
         <user_role display_value="x_1593770_mock_ski.gestor" name="x_1593770_mock_ski.gestor">5790af88c304e2106f5a784ed401314f</user_role>
         <ws_access>true</ws_access>
     </sys_db_object>
