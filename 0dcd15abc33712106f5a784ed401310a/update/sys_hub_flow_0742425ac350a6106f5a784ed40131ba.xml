@@ -15,7 +15,7 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>flow_para_solicitao_de_frias</internal_name>
-        <label_cache>[{"name":"Created_1.current.description","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"description","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["short_description"]}},{"name":"Created_1.current.solicitante","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante","reference":"x_1593770_mock_ski_equipe","reference_display":"Equipe","type":"reference","base_type":"reference","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"solicitante","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["solicitante"]}},{"name":"Created_1.current.work_start","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual start","reference":"","reference_display":"Actual start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"work_start","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["comeco"]}},{"name":"Created_1.current.work_end","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual end","reference":"","reference_display":"Actual end","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"work_end","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["fim"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Serviço Compartilhado Record","reference":"x_1593770_mock_ski_servico_compartilhado","reference_display":"Serviço Compartilhado","type":"reference","base_type":"reference","usedInstances":{"f1c7379f-b08d-4a0c-83f8-dd845827d477":["record"],"e2957ad0-ed1b-42e9-81de-c1b6a46f1ac6":["record"]},"attributes":{}},{"name":"Created_1.current.solicitante.manager","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1593770_mock_ski_equipe","column_name":"manager","usedInstances":{"f1c7379f-b08d-4a0c-83f8-dd845827d477":["approval_conditions"]}}]</label_cache>
+        <label_cache>[{"name":"Created_1.current.solicitante.manager","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1593770_mock_ski_equipe","column_name":"manager","usedInstances":{"f1c7379f-b08d-4a0c-83f8-dd845827d477":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Serviço Compartilhado Record","reference":"x_1593770_mock_ski_servico_compartilhado","reference_display":"Serviço Compartilhado","type":"reference","base_type":"reference","usedInstances":{"f1c7379f-b08d-4a0c-83f8-dd845827d477":["record"],"e2957ad0-ed1b-42e9-81de-c1b6a46f1ac6":["record"]},"attributes":{}},{"name":"Created_1.current.work_end","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual end","reference":"","reference_display":"Actual end","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"work_end","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["fim"]}},{"name":"Created_1.current.work_start","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Actual start","reference":"","reference_display":"Actual start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"work_start","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["comeco"]}},{"name":"Created_1.current.solicitante","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Solicitante","reference":"x_1593770_mock_ski_equipe","reference_display":"Equipe","type":"reference","base_type":"reference","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"solicitante","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["solicitante"]}},{"name":"Created_1.current.description","label":"Trigger - Record Created➛Serviço Compartilhado Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"x_1593770_mock_ski_servico_compartilhado","column_name":"description","usedInstances":{"8a14d538-525a-4833-a817-2ddc3cdc2ee6":["short_description"]}}]</label_cache>
         <master_snapshot>3c907eb5c3a422106f5a784ed40131eb</master_snapshot>
         <master_snapshot_digest/>
         <name>FLOW PARA SOLICITAÇÃO DE FÉRIAS</name>
@@ -28,7 +28,7 @@
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>published</status>
+        <status>draft</status>
         <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0742425ac350a6106f5a784ed40131ba</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>FLOW PARA SOLICITAÇÃO DE FÉRIAS</sys_name>
         <sys_overrides/>
         <sys_package display_value="Mock Skillup" source="x_1593770_mock_ski">0dcd15abc33712106f5a784ed401310a</sys_package>
@@ -44,7 +44,7 @@
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_update_name>sys_hub_flow_0742425ac350a6106f5a784ed40131ba</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-28 16:42:13</sys_updated_on>
+        <sys_updated_on>2025-04-15 16:33:20</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow>
@@ -300,7 +300,7 @@
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
         <attributes/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
         <display_text/>
         <flow display_value="FLOW PARA SOLICITAÇÃO DE FÉRIAS">0742425ac350a6106f5a784ed40131ba</flow>
         <generation_source/>
@@ -310,10 +310,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-18 11:32:29</sys_created_on>
         <sys_id>1ac9c226c354e6106f5a784ed40131c2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-28 16:42:06</sys_updated_on>
+        <sys_updated_on>2025-04-15 16:33:19</sys_updated_on>
         <ui_id>e2957ad0-ed1b-42e9-81de-c1b6a46f1ac6</ui_id>
         <values>H4sIAAAAAAAA/+1UwWobMRD9FaPzsux6bSfxrcQYemgCScklDUIrjW0R7WoraR27xt/TD+mPdbSrdRynTU0wlEJ102jmzXujx9xviBRkTAYgkvQiHfEszbJ+kvTPB2k+yvK0LzIGkJKIlKwAzDTAtRF4XzJV+8Bmc2mAORA0jXltDJRuu8V3IW2l2PoupGGEL6QS+E7G9w8RqZhBRAeGjDcHT25dAVUsB4WFE83rAkF7HyeIcSzbrvqmo3tI3/fAuwjoVPogPnk+aRIRWDkoBWC7GVMWIlKwUjCnzZqMnakxgKrFdanWu4yFLF2rtGArK78h/iDxeTNAaTxMYXelYULdcLTkcF05qcs24liuuslpVRflVSvBzxZmrFZub7a1RTyoPGVPomU4u13op5uu31SWjbrAVmnO1O7GnDMyrx1Y/x2goBlKwapKlnNaGb2UTTFSKeK5wks8U/oJe1o5L2PGPe8YB8TiKcYnTfiOGelFfEIYLN424unX2vdtZQTCtNHcCKbNR2Gq5UZW7gMCLyHQ3EbBrvnwLQPwi+f/3sN8tuyKpsOL7OwsoYXmj9Q+SmrBLCXXFOWhMZ1UCyb0axff+rQf33Xv8iDvfd7+7Nn1rlp2xyp7UfwbpcHdL2LB3MOTmfv8L5k7MPrH3P0nTyf9N5fa3k83NrZ7frYO9++XOkky0X/t2YPXdzoVCsR00GtRo6M5dwBTCUrYX4jorBoa0GVosNvFJ/NrOkqa838ln3AlP/wEIORNIkMIAAA=</values>
     </sys_hub_action_instance_v2>
@@ -322,20 +322,20 @@
         <action_type_parent display_value="Manda a solicitação pro doidão la">1a4aca62c354e6106f5a784ed40131f5</action_type_parent>
         <attributes/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>cddee235c3a422106f5a784ed40131d7</compiled_snapshot>
         <display_text/>
         <flow display_value="FLOW PARA SOLICITAÇÃO DE FÉRIAS">0742425ac350a6106f5a784ed40131ba</flow>
         <generation_source/>
-        <order>2</order>
+        <order>1</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-28 16:42:06</sys_created_on>
         <sys_id>87803eb5c3a422106f5a784ed40131ec</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-28 16:42:11</sys_updated_on>
+        <sys_updated_on>2025-04-15 16:33:19</sys_updated_on>
         <ui_id>8a14d538-525a-4833-a817-2ddc3cdc2ee6</ui_id>
         <values>H4sIAAAAAAAA/+2VyW7bMBCG30Vny6AWSnJuRdIABdoG6JJLEQgUOYqJUEsoKolr+Hn6IH2xDi1ZsQPHTlM3bYEeNQvnn+Wzv8wdKZwjJ5kIAD+gPGCh73skyimLkxBESLzAE5kzckpWAEY200qbVEDDtayNrEp03TDVWt98fqyBGRCpN+at1lCa8VrkYoGxQja1YrPzn0jhU6kEepyjLxcjp2YalRjQztH8gcvMakgVy0Dhyx+NluUlpj+1wSFxS4c7mrdFrWtVrtLCavNGDtwZKAVg+ZypBkZOwUrBTKVnzpHRLRqwdXFWqtkQMZWlwcccG3vXyK/4ckIIsZE5YJ8cOu/wmfbz7Mx8WkkOZ520pcWwTPU5vFJtUb7vOrGbgJy1yqw2gZa2wfegtqKtjF5TjgO5/bAqeCrLZX+9U1WcqeGLGZxC1hpo7HJa+enBbDrL24cbAgUFVkwLVtdoSWtd3chlFRRdjC8VfoxzVd3a0cvLcsy47XCMw2TjU7SfLM3nTEvb7jt8BpNtuc+lvG7hjb2AHCI/Z1niJtEE3FDEzE086rlZPPEmOaMRzcFZLEebXre2qW5I/TjSbqIY0C3/FUq4gb7zxWjFEd11ZuCtnVKlJJeGlQb2ELQWuY2gZwMyrHRgZL/4gZEN9Vtb6rnQa1V6NPxDoRH4m2DcpR6dBHFM0qLiV2lzJVO4bmUNjxDzeuV8nJtdT/45oNaHusnU+lJfBCtKKAk9JEoEhLshoRM3QYub+yL2IM5p5tNfxmqy89cbovsbxMaAV3uIuq00rtIwbQ4K1AkzA0tPULxKO0bJ379VW3roEVouKhXd6z1DwaEYCv/1P5eN6WzC0C/kRTggCWcTEsYuJSJ2Q+aBm9GAuyLmEYtDkkU8PwgHfvTYVZHg/oZyWTwFAiz+WxHYI3aVdrpUuyF9x+2H/2//77r9ICY+B8pdHobCDTllLvOYcHke+5z5OY9J9Ozbv/gBmob6L6QMAAA=</values>
     </sys_hub_action_instance_v2>
@@ -344,20 +344,20 @@
         <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
         <attributes/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
         <display_text/>
         <flow display_value="FLOW PARA SOLICITAÇÃO DE FÉRIAS">0742425ac350a6106f5a784ed40131ba</flow>
         <generation_source/>
-        <order>1</order>
+        <order>2</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-18 11:03:11</sys_created_on>
         <sys_id>8913c6aac314e6106f5a784ed401318e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Mock Skillup">0dcd15abc33712106f5a784ed401310a</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-18 11:32:29</sys_updated_on>
+        <sys_updated_on>2025-04-15 16:33:19</sys_updated_on>
         <ui_id>f1c7379f-b08d-4a0c-83f8-dd845827d477</ui_id>
         <values>H4sIAAAAAAAA/+1XX2/aMBD/KsjPKAukDMpbVYS0SVultttLqSzjOODVsTPHoWWIz7MPsi+2c+KEFNoUIaRuVR/vfH9+d/c7x7lZIR6iIeoPoi47Pe36047vB74/6FF/ELBp0P/YDwj1URtJEjOw1IwqHYK8ICKzitXqXDNiWIg7Hs20ZtKs13Ae8jQRZPndmYGGzrkI4RwNb27bKCEaIhqm0XC1dWSWCcOCTJkAx5GiWQxBW59GEGNftKX3ZQl3G77NAXLoomNulXBk8fhtxB4MkyGDbBERKWujmMiQGKWXaGh0BgooOryQYllZzLk0RaExeUj5LwgfdK1dxKAy6ppQidg1qOyN4pRdJIYrWWgMmYqycUpksfxaVGBbyyKSCVNrbZZCPJZYyBZEgTC6mqv7yzLfmMu8OIdWKEpEJRFjNJ9mhqV2GkywvCcxSRIuZzjRasFzZ4ASezMBghcJdQ85Uz6THqEWtwcNIt4Y9KNc/Z1obov4AmHAeZ0Xj39mNm9RhgOM85qLgsEqpZon5gxiLphDuG47ok5p4+jpZtJFuA1PH3Cndxr0+z6OFb3D6R3HKdMLThWGooCNhos5CdUuda+s2Z/fqnW+ZXcYoa8tsFY+zfbeRT1y3i3SsTkXsSxCOzJ3msnsNPuweeC/Dpsdov+Mzi8x2e80DT0cbIYM+QAxETjiTNSv3vJgl7K1k8NIOrapHpF0D7yl85nL3ho7wM8V4mibi1u07R6Rtv4rEfftXsO0kQws2Mz8h8q0bOAunvM0H+mzHK5ZHIvLe8AvnT8X+LepvF1WA5ODdyb/w0w+6TVSgT1xe1ElQ27xpTU+F3ceS8/k8tvNE29iL1WCU26INMyD8ZMZ0+v17S7tDw902HZUl/VlJlhabsgebame2M6vsU1uP6pD7Zzcjpwc68X9eivyNl8ptJEH0elm7mEG7QCq1n8NJ6gAOUHDCZJKsglqT5C1wpYQuRosAFx1kOtWq/W60GSauACdmrjxDskyzS1TOmchkCrXPtIUTHf6Y/6ZXrkErRHg/nDNa9+Xl7tW/d5mhf+TjXRbU1VSdI7Xvy69o31dTt4Xp7Y4AJPj6hkNHxO4gg7eptu/x4H4IGgRAAA=</values>
     </sys_hub_action_instance_v2>
@@ -788,14 +788,14 @@
     <sys_hub_flow action="UPDATE">
         <sys_id>0742425ac350a6106f5a784ed40131ba</sys_id>
         <latest_snapshot>3c907eb5c3a422106f5a784ed40131eb</latest_snapshot>
-        <compiler_build/>
+        <compiler_build>glide-xanadu-07-02-2024__patch6-01-29-2025_02-11-2025_1128.zip</compiler_build>
     </sys_hub_flow>
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0742425ac350a6106f5a784ed40131ba^sys_idNOT INc190beb5c3a422106f5a784ed401312a"/>
     <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
         <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
-        <plan/>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"c190beb5c3a422106f5a784ed401312a","name":"plan","plan_signature":null}}</plan>
         <plan_id>0742425ac350a6106f5a784ed40131ba</plan_id>
-        <snapshot>3c907eb5c3a422106f5a784ed40131eb</snapshot>
+        <snapshot>22deda19c37022106f5a784ed40131ba</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-28 16:42:13</sys_created_on>
         <sys_domain>global</sys_domain>
